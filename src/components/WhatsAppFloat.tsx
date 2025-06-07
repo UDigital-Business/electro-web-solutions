@@ -13,7 +13,7 @@ export function WhatsAppFloat() {
   return (
     <Button
       onClick={handleWhatsAppClick}
-      className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full bg-green-500 shadow-lg transition-all duration-300 hover:bg-green-600 hover:scale-110 animate-pulse"
+      className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full bg-green-500 shadow-lg transition-all duration-300 hover:bg-green-600 hover:scale-110"
       size="icon"
     >
       <MessageCircle className="h-6 w-6 text-white" />
