@@ -78,8 +78,8 @@ export function HeroSection() {
             <div className="relative">
               <div className="absolute inset-0 gradient-dsae rounded-2xl blur-3xl opacity-20"></div>
               <img
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
-                alt="Componentes electrónicos y circuitos"
+                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80"
+                alt="Ingenieros instalando sistemas eléctricos en edificio"
                 className="relative rounded-2xl shadow-2xl w-full h-[500px] object-cover"
               />
             </div>
