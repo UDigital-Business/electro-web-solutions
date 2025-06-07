@@ -8,37 +8,37 @@ export function ProductsSection() {
       icon: Monitor,
       title: "Sistemas de Monitoreo Online",
       description: "Soluciones de monitoreo continuo 24/7 para equipos críticos con alertas automáticas.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80"
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80"
     },
     {
       icon: Smartphone,
       title: "Aplicaciones Móviles",
       description: "Apps especializadas para recolección de datos y análisis en campo con sincronización en tiempo real.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=400&q=80"
+      image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=400&q=80"
     },
     {
       icon: HardDrive,
       title: "Equipos de Adquisición",
       description: "Colectores de datos portátiles de alta precisión para análisis de vibraciones y parámetros eléctricos.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=400&q=80"
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80"
     },
     {
       icon: Cpu,
       title: "Software de Análisis",
       description: "Plataformas avanzadas de análisis con algoritmos de inteligencia artificial para diagnóstico predictivo.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=400&q=80"
+      image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=400&q=80"
     },
     {
       icon: Camera,
       title: "Cámaras Termográficas",
       description: "Equipos de termografía infrarroja para detección de puntos calientes y análisis térmico.",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=400&q=80"
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80"
     },
     {
       icon: Radio,
       title: "Sensores Inalámbricos",
       description: "Red de sensores IoT para monitoreo distribuido con conectividad avanzada.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80"
+      image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=400&q=80"
     }
   ];
 
