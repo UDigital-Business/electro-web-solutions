@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export function WhatsAppFloat() {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "573123456789"; // Cambiar por el número de WhatsApp real
+    const phoneNumber = "523334471899"; // Número actualizado
     const message = "Hola, me interesa conocer más sobre los servicios de DSAE";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");

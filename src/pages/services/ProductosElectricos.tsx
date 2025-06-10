@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ShoppingCart, ArrowLeft, CheckCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const ProductosElectricos = () => {
   const navigate = useNavigate();
@@ -58,7 +59,7 @@ const ProductosElectricos = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {subServicios.map((servicio, index) => (
               <Card 
                 key={index}
@@ -86,6 +87,21 @@ const ProductosElectricos = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* Call to Action Section */}
+          <div className="text-center bg-gradient-to-br from-dsae-blue/10 to-dsae-green/10 rounded-2xl p-8 animate-fade-in">
+            <h3 className="text-2xl font-bold mb-4 text-foreground">
+              ¿Buscas productos eléctricos de calidad?
+            </h3>
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              Contáctanos para conocer nuestro catálogo completo de productos eléctricos. 
+              Te ayudamos a encontrar los equipos perfectos para tu proyecto.
+            </p>
+            <WhatsAppButton 
+              message="Hola, me interesa conocer más sobre los Productos Eléctricos de DSAE"
+              size="lg"
+            />
           </div>
         </div>
       </section>
