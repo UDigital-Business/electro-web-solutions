@@ -1,46 +1,39 @@
 
-import { Wrench, BarChart3, Shield, Cog, Zap, Settings } from "lucide-react";
+import { Zap, ShoppingCart, Building, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 export function ServicesSection() {
+  const navigate = useNavigate();
+
   const services = [
     {
-      icon: BarChart3,
-      title: "Análisis de Vibraciones",
-      description: "Diagnóstico preciso del estado de máquinas rotatorias mediante análisis espectral avanzado.",
-      features: ["Detección temprana de fallas", "Análisis de tendencias", "Reportes detallados"]
-    },
-    {
       icon: Zap,
-      title: "Análisis Eléctrico",
-      description: "Evaluación completa de sistemas eléctricos para optimizar eficiencia y prevenir fallas.",
-      features: ["Análisis de calidad de energía", "Termografía infrarroja", "Medición de parámetros eléctricos"]
+      title: "Análisis Eléctricos",
+      description: "Evaluación completa de sistemas eléctricos para optimizar eficiencia y prevenir fallas en instalaciones industriales y comerciales.",
+      features: ["Análisis de calidad de energía", "Termografía infrarroja", "Medición de parámetros eléctricos"],
+      route: "/servicios/analisis-electricos"
     },
     {
-      icon: Cog,
-      title: "Mantenimiento Predictivo",
-      description: "Estrategias de mantenimiento basadas en condición para maximizar la disponibilidad.",
-      features: ["Planificación optimizada", "Reducción de costos", "Aumento de vida útil"]
+      icon: ShoppingCart,
+      title: "Productos Eléctricos",
+      description: "Suministro de equipos y componentes eléctricos de alta calidad para proyectos industriales y comerciales.",
+      features: ["Equipos de protección", "Sistemas de control", "Instrumentación especializada"],
+      route: "/servicios/productos-electricos"
     },
     {
-      icon: Shield,
-      title: "Consultoría Técnica",
-      description: "Asesoramiento especializado para mejorar procesos y implementar mejores prácticas.",
-      features: ["Auditorías técnicas", "Planes de mejora", "Capacitación especializada"]
-    },
-    {
-      icon: Settings,
-      title: "Puesta en Marcha",
-      description: "Servicios completos de instalación y puesta en marcha de equipos industriales.",
-      features: ["Instalación profesional", "Pruebas de funcionamiento", "Documentación técnica"]
-    },
-    {
-      icon: Wrench,
-      title: "Mantenimiento Correctivo",
-      description: "Reparaciones especializadas con diagnóstico preciso y soluciones duraderas.",
-      features: ["Diagnóstico avanzado", "Reparaciones especializadas", "Garantía de calidad"]
+      icon: Building,
+      title: "Desarrollo de Ingeniería Estructural",
+      description: "Diseño y desarrollo de estructuras especializadas para instalaciones eléctricas y proyectos industriales.",
+      features: ["Diseño estructural", "Análisis de cargas", "Modelado 3D especializado"],
+      route: "/servicios/ingenieria-estructural"
     }
   ];
+
+  const handleViewMore = (route: string) => {
+    navigate(route);
+  };
 
   return (
     <section id="servicios" className="py-20">
@@ -72,9 +65,9 @@ export function ServicesSection() {
                   {service.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="text-center">
+              <CardContent className="text-center space-y-4">
                 <p className="text-muted-foreground mb-4">{service.description}</p>
-                <ul className="text-sm text-muted-foreground space-y-1">
+                <ul className="text-sm text-muted-foreground space-y-1 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center justify-center">
                       <span className="w-1.5 h-1.5 bg-dsae-blue rounded-full mr-2"></span>
@@ -82,6 +75,13 @@ export function ServicesSection() {
                     </li>
                   ))}
                 </ul>
+                <Button
+                  onClick={() => handleViewMore(service.route)}
+                  className="w-full bg-gradient-to-r from-dsae-blue to-dsae-green hover:opacity-90 transition-all duration-300 group"
+                >
+                  Ver más
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
               </CardContent>
             </Card>
           ))}
