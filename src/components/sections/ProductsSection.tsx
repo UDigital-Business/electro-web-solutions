@@ -8,7 +8,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 
 export function ProductsSection() {
   const products = [
@@ -51,7 +50,7 @@ export function ProductsSection() {
   ];
 
   return (
-    <section id="productos" className="py-20 bg-muted/30">
+    <section id="productos" className="py-20 bg-muted/30 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -63,15 +62,8 @@ export function ProductsSection() {
           </p>
         </div>
 
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative w-screen left-1/2 transform -translate-x-1/2">
           <Carousel
-            plugins={[
-              Autoplay({
-                delay: 4000,
-                stopOnInteraction: true,
-                stopOnMouseEnter: true,
-              }),
-            ]}
             opts={{
               align: "start",
               loop: true,
@@ -112,16 +104,9 @@ export function ProductsSection() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12 bg-white/95 hover:bg-white shadow-lg border-2 border-dsae-blue/20 hover:border-dsae-blue/40 transition-all duration-300" />
-            <CarouselNext className="hidden md:flex -right-12 bg-white/95 hover:bg-white shadow-lg border-2 border-dsae-blue/20 hover:border-dsae-blue/40 transition-all duration-300" />
+            <CarouselPrevious className="hidden md:flex left-4 bg-white/95 hover:bg-white shadow-lg border-2 border-dsae-blue/20 hover:border-dsae-blue/40 transition-all duration-300" />
+            <CarouselNext className="hidden md:flex right-4 bg-white/95 hover:bg-white shadow-lg border-2 border-dsae-blue/20 hover:border-dsae-blue/40 transition-all duration-300" />
           </Carousel>
-          
-          {/* Indicador de autoplay */}
-          <div className="text-center mt-6">
-            <p className="text-sm text-muted-foreground">
-              El carrusel se reproduce automáticamente • Pausa al pasar el cursor
-            </p>
-          </div>
         </div>
       </div>
     </section>

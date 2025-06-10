@@ -25,7 +25,7 @@ export function LocationSection() {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Dirección</h3>
                   <p className="text-muted-foreground">
-                    Guadalajara, Jalisco, México
+                    Joseph Hayden 4883, Prados Guadalupe, 45030 Zapopan, Jal.
                   </p>
                 </div>
               </div>
@@ -69,17 +69,20 @@ export function LocationSection() {
           {/* Mapa */}
           <div className="animate-fade-in">
             <div className="relative overflow-hidden rounded-2xl shadow-lg">
-              <iframe
-                src="https://maps.app.goo.gl/y3YC84TP2DNEn62i8?g_st=aw"
-                width="100%"
-                height="400"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-96"
-                title="Ubicación DSAE"
-              ></iframe>
+              <div style={{ width: "100%" }}>
+                <iframe 
+                  width="100%" 
+                  height="400" 
+                  frameBorder="0" 
+                  scrolling="no" 
+                  marginHeight={0} 
+                  marginWidth={0} 
+                  src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Joseph%20Hayden%204883,%20Prados%20Guadalupe,%2045030%20Zapopan,%20Jal.+(Joseph%20Hayden%204883,%20Prados%20Guadalupe,%2045030%20Zapopan,%20Jal.)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                  title="Ubicación DSAE"
+                  className="w-full h-96 rounded-2xl"
+                >
+                </iframe>
+              </div>
             </div>
           </div>
         </div>
