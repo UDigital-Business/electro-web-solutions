@@ -8,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 export function ProductsSection() {
   const products = [
@@ -64,6 +65,13 @@ export function ProductsSection() {
 
         <div className="relative max-w-7xl mx-auto">
           <Carousel
+            plugins={[
+              Autoplay({
+                delay: 4000,
+                stopOnInteraction: true,
+                stopOnMouseEnter: true,
+              }),
+            ]}
             opts={{
               align: "start",
               loop: true,
@@ -73,35 +81,47 @@ export function ProductsSection() {
             <CarouselContent className="-ml-2 md:-ml-4">
               {products.map((product, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="group overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in h-full">
+                  <Card className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-fade-in h-full bg-gradient-to-br from-background to-background/95">
                     <div className="relative overflow-hidden">
                       <img 
                         src={product.image} 
                         alt={product.title}
-                        className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                        className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <div className="absolute top-4 left-4 p-2 bg-white/90 rounded-full">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="absolute top-4 left-4 p-3 bg-white/95 backdrop-blur-sm rounded-full shadow-lg group-hover:bg-white transition-colors duration-300">
                         <product.icon className="h-6 w-6 text-dsae-blue" />
+                      </div>
+                      <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <div className="bg-white/95 backdrop-blur-sm rounded-lg p-3">
+                          <p className="text-sm text-gray-800 font-medium">Tecnología Avanzada</p>
+                        </div>
                       </div>
                     </div>
                     
-                    <CardHeader>
+                    <CardHeader className="pb-3">
                       <CardTitle className="text-xl font-bold text-foreground group-hover:text-dsae-blue transition-colors duration-300">
                         {product.title}
                       </CardTitle>
                     </CardHeader>
                     
-                    <CardContent>
-                      <p className="text-muted-foreground">{product.description}</p>
+                    <CardContent className="pt-0">
+                      <p className="text-muted-foreground leading-relaxed">{product.description}</p>
                     </CardContent>
                   </Card>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12 bg-white/90 hover:bg-white shadow-lg" />
-            <CarouselNext className="hidden md:flex -right-12 bg-white/90 hover:bg-white shadow-lg" />
+            <CarouselPrevious className="hidden md:flex -left-12 bg-white/95 hover:bg-white shadow-lg border-2 border-dsae-blue/20 hover:border-dsae-blue/40 transition-all duration-300" />
+            <CarouselNext className="hidden md:flex -right-12 bg-white/95 hover:bg-white shadow-lg border-2 border-dsae-blue/20 hover:border-dsae-blue/40 transition-all duration-300" />
           </Carousel>
+          
+          {/* Indicador de autoplay */}
+          <div className="text-center mt-6">
+            <p className="text-sm text-muted-foreground">
+              El carrusel se reproduce automáticamente • Pausa al pasar el cursor
+            </p>
+          </div>
         </div>
       </div>
     </section>
