@@ -9,36 +9,48 @@ import {
 export function FAQSection() {
   const faqs = [
     {
-      question: "¿Qué tipos de análisis eléctricos realizan?",
-      answer: "Realizamos estudios de coordinación de protecciones, análisis de cortocircuito, estudios de arco eléctrico, estudios de flujo de potencia, análisis de calidad de energía, y estudios de estabilidad transitoria."
+      question: "¿Qué es el factor de potencia y por qué es importante?",
+      answer: "El factor de potencia (FP) es una medida que indica qué tan eficientemente se está utilizando la energía eléctrica en una instalación. Se calcula como la relación entre la potencia real (kW) y la potencia aparente (kVA). Un FP cercano a 1 significa que la mayor parte de la energía está siendo aprovechada para hacer trabajo útil, mientras que un FP bajo implica pérdidas energéticas y un uso ineficiente de la red. Un bajo FP puede generar sobrecalentamiento en los equipos, provocar caídas de tensión, acortar la vida útil de componentes eléctricos y, además, dar lugar a penalizaciones económicas en el recibo eléctrico, según lo establecido por la Comisión Federal de Electricidad (CFE). Mejorar el FP ayuda a optimizar el rendimiento del sistema eléctrico, reducir costos y prevenir sanciones."
     },
     {
-      question: "¿Cuánto tiempo toma completar un proyecto?",
-      answer: "El tiempo de ejecución varía según la complejidad del proyecto. Los análisis básicos pueden tomar de 1-2 semanas, mientras que proyectos más complejos pueden requerir de 4-8 semanas. Proporcionamos cronogramas detallados al inicio de cada proyecto."
+      question: "¿Qué es el Código de Red y quién debe cumplirlo?",
+      answer: "El Código de Red es una regulación emitida por la Comisión Reguladora de Energía (CRE) que establece los criterios mínimos de eficiencia, calidad, seguridad y sustentabilidad para los usuarios del Sistema Eléctrico Nacional. Es obligatorio para todos los centros de carga conectados a media o alta tensión con una demanda mayor o igual a 1 MW en cualquier momento del año. Esto incluye industrias, centros comerciales, hospitales, hoteles y otras instalaciones de gran consumo. El objetivo es garantizar que estas instalaciones no afecten la estabilidad del sistema eléctrico y hagan un uso responsable y eficiente de la energía."
     },
     {
-      question: "¿Trabajan con sistemas de voltaje específicos?",
-      answer: "Sí, trabajamos con sistemas de baja, media y alta tensión. Nuestro equipo tiene experiencia en sistemas desde 120V hasta 400kV, adaptándonos a las necesidades específicas de cada cliente."
+      question: "¿Por qué debo cumplir con el Código de Red?",
+      answer: "Cumplir con el Código de Red permite a las empresas evitar multas por parte de la CRE, mejorar su eficiencia operativa al reducir pérdidas de energía, prolongar la vida útil de sus equipos eléctricos y asegurar una operación segura. Además, ayuda a mantener la estabilidad del sistema eléctrico nacional al evitar distorsiones o sobrecargas que puedan afectar a otros usuarios. Algunos de los requisitos técnicos clave incluyen mantener un factor de potencia mínimo de 0.95, controlar los niveles de distorsión armónica, garantizar una buena regulación de voltaje y contar con protecciones eléctricas adecuadas."
     },
     {
-      question: "¿Ofrecen servicios de mantenimiento preventivo?",
-      answer: "Absolutamente. Ofrecemos programas de mantenimiento preventivo personalizados que incluyen inspecciones regulares, análisis de vibraciones, termografía, y monitoreo continuo de equipos críticos."
+      question: "¿Qué es un estudio de cortocircuito y para qué sirve?",
+      answer: "Es un análisis técnico que calcula las corrientes máximas que podrían circular en caso de una falla eléctrica grave (como un contacto entre fases o a tierra). Este estudio permite seleccionar y coordinar los dispositivos de protección eléctrica (interruptores, fusibles, relevadores) para que actúen eficazmente ante una falla, protegiendo tanto a los equipos como al personal. También es obligatorio según el Código de Red y otras normas eléctricas. Su implementación es clave para planificar la expansión de la red eléctrica de forma segura y evitar interrupciones graves en la operación industrial."
     },
     {
-      question: "¿Qué certificaciones y estándares manejan?",
-      answer: "Trabajamos bajo estándares internacionales como IEEE, IEC, NEC, CFE, y normas mexicanas (NOM). Nuestro equipo cuenta con certificaciones profesionales reconocidas en la industria."
+      question: "¿Qué es la coordinación de protecciones y por qué es importante?",
+      answer: "Es un diseño técnico que establece cómo deben actuar los dispositivos de protección eléctrica (como interruptores y relevadores) en caso de una falla. Su propósito es que solo se aísle la zona afectada, evitando que toda la instalación se detenga por un evento localizado. Esto garantiza la continuidad de operación, protege equipos sensibles y mejora la seguridad del personal. Además, su implementación es requerida por normativas como el Código de Red y la NOM-001-SEDE. Una coordinación adecuada también reduce tiempos de paro y costos por mantenimiento o reparación."
     },
     {
-      question: "¿Pueden trabajar en proyectos de emergencia?",
-      answer: "Sí, ofrecemos servicios de emergencia 24/7 para situaciones críticas. Contamos con un equipo de respuesta rápida que puede atender fallas y problemas urgentes en tiempo récord."
+      question: "¿Cada cuánto tiempo se debe dar mantenimiento a una subestación eléctrica?",
+      answer: "Se recomienda realizar un mantenimiento preventivo integral al menos una vez al año. En ambientes adversos (con polvo, humedad o contaminantes), deben realizarse inspecciones y limpiezas cada seis meses. El mantenimiento incluye revisión visual, limpieza, pruebas eléctricas, ajustes y corrección de anomalías. También debe aplicarse mantenimiento correctivo inmediato ante cualquier falla. Una gestión adecuada del mantenimiento mejora la seguridad, evita fallas inesperadas y cumple con la NOM-001-SEDE."
     },
     {
-      question: "¿Qué incluyen sus reportes de análisis?",
-      answer: "Nuestros reportes incluyen análisis detallado de resultados, recomendaciones específicas, diagramas técnicos, cronogramas de implementación, y seguimiento post-implementación para garantizar la efectividad de las soluciones."
+      question: "¿Qué es una UVIE y para qué sirve?",
+      answer: "Una UVIE (Unidad de Verificación Industrial Eléctrica) es una entidad autorizada por la Entidad Mexicana de Acreditación (EMA) y reconocida por la CRE. Su función es verificar que las instalaciones eléctricas industriales cumplan con los requisitos técnicos y de seguridad establecidos en la normativa nacional. Contar con la verificación de una UVIE permite operar legalmente, obtener permisos, evitar sanciones y garantizar la seguridad eléctrica. También ayuda a detectar áreas de mejora en la instalación para aumentar su confiabilidad y eficiencia."
     },
     {
-      question: "¿Manejan proyectos de energías renovables?",
-      answer: "Sí, tenemos amplia experiencia en proyectos de energía solar, eólica y sistemas híbridos. Realizamos estudios de factibilidad, diseño de sistemas, y análisis de integración a la red eléctrica."
+      question: "¿Qué es un diagrama unifilar y por qué es indispensable?",
+      answer: "Es una representación gráfica simplificada del sistema eléctrico de una instalación. Muestra cómo están conectados los elementos eléctricos (transformadores, interruptores, cargas, etc.), lo que facilita el análisis, mantenimiento y operación del sistema. Es un requisito para cumplir con la NOM-001-SEDE y el Código de Red, así como para realizar estudios eléctricos. Tener un diagrama actualizado mejora la seguridad, agiliza el diagnóstico de fallas y es indispensable para auditorías o inspecciones técnicas."
+    },
+    {
+      question: "¿Para qué sirve un estudio de iluminación?",
+      answer: "Permite diseñar e implementar un sistema de iluminación eficiente y seguro. En el ámbito industrial, asegura que haya niveles adecuados de luz para evitar fatiga visual, mejorar la productividad y prevenir accidentes. También ayuda a reducir el consumo energético, cumplir con la NOM-025-STPS y otras normas internacionales, y promover la sostenibilidad. Un buen diseño de iluminación reduce costos operativos y mejora las condiciones laborales."
+    },
+    {
+      question: "¿Por qué necesito un diseño estructural antes de construir?",
+      answer: "El diseño estructural asegura que la obra será resistente, segura y funcional, considerando factores como el peso, viento, sismos y uso previsto. Este diseño es obligatorio y debe cumplir con normativas mexicanas como la NOM-008-CNA y las Normas Técnicas Complementarias. Además de garantizar la estabilidad del edificio, permite optimizar el uso de materiales, facilitar la supervisión en obra y evitar errores que podrían generar daños graves o colapsos en el futuro."
+    },
+    {
+      question: "¿Qué es un dictamen estructural y por qué es útil?",
+      answer: "Es un documento técnico elaborado por un ingeniero estructurista que evalúa la seguridad, estado y capacidad de una estructura existente o en proyecto. Es indispensable para trámites legales, permisos de construcción, cambios de uso y certificaciones. También permite identificar daños o debilidades estructurales, y planear acciones de reforzamiento o rehabilitación. Su valor radica en garantizar la seguridad de personas, proteger inversiones y respaldar decisiones técnicas con base en normas oficiales como la NOM-022-STPS."
     }
   ];
 

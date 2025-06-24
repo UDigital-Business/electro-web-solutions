@@ -7,17 +7,17 @@ export function AboutSection() {
     {
       icon: Target,
       title: "Misión",
-      description: "Proporcionar soluciones integrales de análisis electromecánicos que optimicen el rendimiento y extiendan la vida útil de los equipos industriales."
+      description: "Desarrollamos soluciones en energía e infraestructura que llevan a las empresas a operar de forma más segura, eficiente y sostenible, mediante análisis electromecánicos y obra civil especializada."
     },
     {
       icon: Eye,
       title: "Visión",
-      description: "Ser líderes reconocidos en el sector de análisis electromecánicos, innovando constantemente para satisfacer las necesidades cambiantes del mercado."
+      description: "Consolidarnos como una empresa líder en servicios de energía e infraestructura, reconocidos por impulsar el crecimiento seguro, eficiente y sostenible de nuestros clientes."
     },
     {
       icon: Heart,
       title: "Valores",
-      description: "Excelencia, integridad, innovación y compromiso con la satisfacción del cliente son los pilares que guían nuestro trabajo diario."
+      description: "Compromiso, Integridad, Calidad, Innovación y Lealtad son los pilares que guían nuestro trabajo diario."
     }
   ];
 
@@ -29,8 +29,8 @@ export function AboutSection() {
             <span className="text-gradient">Sobre Nosotros</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Con más de 15 años de experiencia en el sector, somos especialistas en el desarrollo 
-            y implementación de soluciones avanzadas para el análisis electromecánico.
+            DSAE (Desarrollo y Soluciones en Análisis Electromecánicos) fue creado con un objetivo muy claro: 
+            ofrecer soluciones técnicas integrales en sistemas eléctricos, estructurales e industriales.
           </p>
         </div>
 
@@ -38,14 +38,22 @@ export function AboutSection() {
           <div className="space-y-6 animate-slide-in-left">
             <h3 className="text-2xl font-bold text-foreground">Nuestra Historia</h3>
             <p className="text-muted-foreground">
-              DSAE nació de la visión de crear un puente entre la tecnología avanzada y las necesidades 
-              reales de la industria. Fundada por un equipo de ingenieros especialistas, hemos crecido 
-              hasta convertirnos en una referencia en análisis electromecánicos.
+              DSAE (Desarrollo y Soluciones en Análisis Electromecánicos) fue creado con un objetivo muy claro: 
+              ofrecer soluciones técnicas integrales en sistemas eléctricos, estructurales e industriales, con un 
+              enfoque en calidad, eficiencia y cumplimiento normativo.
             </p>
             <p className="text-muted-foreground">
-              Nuestro enfoque se centra en la innovación continua, la calidad excepcional y el 
-              compromiso inquebrantable con nuestros clientes. Cada proyecto es una oportunidad 
-              para demostrar nuestra experiencia y dedicación.
+              Nuestra historia comienza en campo detectando que muchas instalaciones carecían de estudios confiables, 
+              proyectos bien definidos o mantenimientos especializados, y que esto ponía en riesgo tanto la operación 
+              como la seguridad en las empresas.
+            </p>
+            <p className="text-muted-foreground">
+              Por eso formamos un equipo multidisciplinario que hoy brinda servicios como: Servicios Eléctricos, 
+              Servicios de Automatización Industrial, Servicios de Diseño Estructural y Obra Civil, y Venta de Productos.
+            </p>
+            <p className="text-muted-foreground font-semibold">
+              Más que hacer estudios, diseñamos soluciones reales para que cada instalación opere con seguridad, 
+              eficiencia y claridad técnica.
             </p>
             <div className="flex items-center space-x-4">
               <Users className="h-8 w-8 text-dsae-blue" />

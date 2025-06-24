@@ -15,37 +15,37 @@ export function ProductsSection() {
       icon: Monitor,
       title: "Sistemas de Monitoreo Online",
       description: "Soluciones de monitoreo continuo 24/7 para equipos críticos con alertas automáticas.",
-      image: "/lovable-uploads/fbfb859c-6f80-49f8-a039-8d205b7248e6.png"
+      image: "/lovable-uploads/16871f7f-87c2-4efb-b282-892bc6f67a6b.png"
     },
     {
       icon: Smartphone,
       title: "Aplicaciones Móviles",
       description: "Apps especializadas para recolección de datos y análisis en campo con sincronización en tiempo real.",
-      image: "/lovable-uploads/917417b8-c06f-4091-9607-043f64022461.png"
+      image: "/lovable-uploads/f1629c45-9a47-448e-9b90-58a6646ba1f2.png"
     },
     {
       icon: HardDrive,
       title: "Equipos de Adquisición",
       description: "Colectores de datos portátiles de alta precisión para análisis de vibraciones y parámetros eléctricos.",
-      image: "/lovable-uploads/6f110ccc-71eb-4fae-8519-d120f2ce161d.png"
+      image: "/lovable-uploads/be5d304a-3231-4e6d-80a8-b71dec35139f.png"
     },
     {
       icon: Cpu,
       title: "Software de Análisis",
       description: "Plataformas avanzadas de análisis con algoritmos de inteligencia artificial para diagnóstico predictivo.",
-      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/9165fa29-0cb8-48dd-87c9-303fd4f6c6e8.png"
     },
     {
       icon: Camera,
       title: "Cámaras Termográficas",
       description: "Equipos de termografía infrarroja para detección de puntos calientes y análisis térmico.",
-      image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/80b5c29a-6d35-4410-8284-67a39620f67c.png"
     },
     {
       icon: Radio,
       title: "Sensores Inalámbricos",
       description: "Red de sensores IoT para monitoreo distribuido con conectividad avanzada.",
-      image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=800&q=80"
+      image: "/lovable-uploads/79b025a8-9cb8-43e3-855c-15ac0aded1b6.png"
     }
   ];
 
