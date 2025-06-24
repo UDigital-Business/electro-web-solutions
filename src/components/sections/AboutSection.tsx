@@ -34,9 +34,9 @@ export function AboutSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <div className="space-y-6 animate-slide-in-left">
-            <h3 className="text-2xl font-bold text-foreground">Nuestra Historia</h3>
+        <div className="mb-16">
+          <div className="space-y-6 animate-slide-in-left max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-foreground text-center">Nuestra Historia</h3>
             <p className="text-muted-foreground">
               DSAE (Desarrollo y Soluciones en Análisis Electromecánicos) fue creado con un objetivo muy claro: 
               ofrecer soluciones técnicas integrales en sistemas eléctricos, estructurales e industriales, con un 
@@ -55,21 +55,13 @@ export function AboutSection() {
               Más que hacer estudios, diseñamos soluciones reales para que cada instalación opere con seguridad, 
               eficiencia y claridad técnica.
             </p>
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center justify-center space-x-4">
               <Users className="h-8 w-8 text-dsae-blue" />
-              <div>
+              <div className="text-center">
                 <div className="font-semibold text-foreground">Equipo Multidisciplinario</div>
                 <div className="text-sm text-muted-foreground">Ingenieros especializados trabajando para usted</div>
               </div>
             </div>
-          </div>
-
-          <div className="animate-fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80"
-              alt="Equipo trabajando en análisis"
-              className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
-            />
           </div>
         </div>
 

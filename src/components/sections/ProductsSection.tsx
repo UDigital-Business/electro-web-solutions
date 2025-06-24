@@ -8,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 export function ProductsSection() {
   const products = [
@@ -33,7 +34,7 @@ export function ProductsSection() {
       icon: Cpu,
       title: "Software de Análisis",
       description: "Plataformas avanzadas de análisis con algoritmos de inteligencia artificial para diagnóstico predictivo.",
-      image: "/lovable-uploads/9165fa29-0cb8-48dd-87c9-303fd4f6c6e8.png"
+      image: "/lovable-uploads/9165fa29-0cb8-48dd-87c9-303fd4f6c8e8.png"
     },
     {
       icon: Camera,
@@ -68,6 +69,11 @@ export function ProductsSection() {
               align: "start",
               loop: true,
             }}
+            plugins={[
+              Autoplay({
+                delay: 4000,
+              }),
+            ]}
             className="w-full"
           >
             <CarouselContent className="-ml-2 md:-ml-4">

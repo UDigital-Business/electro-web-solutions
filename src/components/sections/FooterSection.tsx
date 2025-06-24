@@ -29,13 +29,13 @@ export function FooterSection() {
               <img 
                 src="/lovable-uploads/ad92c90c-2a9f-42db-bf1d-063723851f3a.png" 
                 alt="DSAE Logo" 
-                className="h-12 w-auto brightness-0 invert"
+                className="h-12 w-auto"
               />
               <span className="text-2xl font-bold">DSAE</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
               Desarrollo y Soluciones en Análisis Electromecánicos. 
-              Más de 15 años ofreciendo tecnología de vanguardia para 
+              2 años ofreciendo tecnología de vanguardia para 
               optimizar el rendimiento de equipos industriales.
             </p>
             <div className="space-y-2 text-sm text-gray-300">
