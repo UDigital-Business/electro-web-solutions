@@ -1,5 +1,5 @@
 
-import { Monitor, Smartphone, HardDrive, Cpu, Camera, Radio } from "lucide-react";
+import { ShoppingCart, Lightbulb, Hammer, Zap } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Carousel,
@@ -13,40 +13,32 @@ import Autoplay from "embla-carousel-autoplay";
 export function ProductsSection() {
   const products = [
     {
-      icon: Monitor,
-      title: "Sistemas de Monitoreo Online",
-      description: "Soluciones de monitoreo continuo 24/7 para equipos críticos con alertas automáticas.",
+      icon: ShoppingCart,
+      title: "Venta de Equipo Eléctrico",
+      description: "Suministro especializado de equipos eléctricos de alta calidad para diferentes sectores industriales.",
+      areas: ["Innovación y tecnología", "Construcción", "Área eléctrica"],
       image: "/lovable-uploads/16871f7f-87c2-4efb-b282-892bc6f67a6b.png"
     },
     {
-      icon: Smartphone,
-      title: "Aplicaciones Móviles",
-      description: "Apps especializadas para recolección de datos y análisis en campo con sincronización en tiempo real.",
+      icon: Lightbulb,
+      title: "Innovación y Tecnología",
+      description: "Soluciones tecnológicas avanzadas para optimizar procesos industriales y comerciales.",
+      areas: ["Sistemas inteligentes", "Automatización", "Monitoreo digital"],
       image: "/lovable-uploads/f1629c45-9a47-448e-9b90-58a6646ba1f2.png"
     },
     {
-      icon: HardDrive,
-      title: "Equipos de Adquisición",
-      description: "Colectores de datos portátiles de alta precisión para análisis de vibraciones y parámetros eléctricos.",
+      icon: Hammer,
+      title: "Construcción",
+      description: "Equipos especializados para proyectos de construcción e infraestructura eléctrica.",
+      areas: ["Herramientas especializadas", "Equipos de seguridad", "Materiales certificados"],
       image: "/lovable-uploads/be5d304a-3231-4e6d-80a8-b71dec35139f.png"
     },
     {
-      icon: Cpu,
-      title: "Software de Análisis",
-      description: "Plataformas avanzadas de análisis con algoritmos de inteligencia artificial para diagnóstico predictivo.",
+      icon: Zap,
+      title: "Área Eléctrica",
+      description: "Componentes y equipos eléctricos para instalaciones industriales y comerciales.",
+      areas: ["Dispositivos de protección", "Sistemas de control", "Instrumentación"],
       image: "/lovable-uploads/9165fa29-0cb8-48dd-87c9-303fd4f6c8e8.png"
-    },
-    {
-      icon: Camera,
-      title: "Cámaras Termográficas",
-      description: "Equipos de termografía infrarroja para detección de puntos calientes y análisis térmico.",
-      image: "/lovable-uploads/80b5c29a-6d35-4410-8284-67a39620f67c.png"
-    },
-    {
-      icon: Radio,
-      title: "Sensores Inalámbricos",
-      description: "Red de sensores IoT para monitoreo distribuido con conectividad avanzada.",
-      image: "/lovable-uploads/79b025a8-9cb8-43e3-855c-15ac0aded1b6.png"
     }
   ];
 
@@ -58,8 +50,8 @@ export function ProductsSection() {
             <span className="text-gradient">Nuestros Productos</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Tecnología de vanguardia diseñada para optimizar sus procesos de análisis 
-            y mantenimiento electromecánico.
+            Equipos eléctricos especializados de alta calidad para satisfacer las necesidades 
+            de innovación, construcción y desarrollo eléctrico de nuestros clientes.
           </p>
         </div>
 
@@ -92,7 +84,7 @@ export function ProductsSection() {
                       </div>
                       <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                         <div className="bg-white/95 backdrop-blur-sm rounded-lg p-3">
-                          <p className="text-sm text-gray-800 font-medium">Tecnología Avanzada</p>
+                          <p className="text-sm text-gray-800 font-medium">Calidad Garantizada</p>
                         </div>
                       </div>
                     </div>
@@ -103,8 +95,19 @@ export function ProductsSection() {
                       </CardTitle>
                     </CardHeader>
                     
-                    <CardContent className="pt-0">
+                    <CardContent className="pt-0 space-y-4">
                       <p className="text-muted-foreground leading-relaxed">{product.description}</p>
+                      <div className="space-y-2">
+                        <h4 className="font-semibold text-sm text-dsae-blue">Áreas de aplicación:</h4>
+                        <ul className="space-y-1">
+                          {product.areas.map((area, idx) => (
+                            <li key={idx} className="flex items-center text-sm text-muted-foreground">
+                              <span className="w-1.5 h-1.5 bg-dsae-green rounded-full mr-2 flex-shrink-0"></span>
+                              {area}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </CardContent>
                   </Card>
                 </CarouselItem>
