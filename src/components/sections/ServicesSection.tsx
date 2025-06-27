@@ -13,12 +13,13 @@ export function ServicesSection() {
       title: "Servicios Eléctricos",
       description: "Soluciones integrales en sistemas eléctricos con cumplimiento normativo y estudios especializados para garantizar eficiencia y seguridad.",
       subServices: [
-        "Estudios de calidad de energía y eficiencia energética",
-        "Cumplimiento de Código de Red",
-        "Estudios eléctricos con base IEEE e IEC",
-        "Mantenimiento a subestaciones eléctricas",
+        "Arco eléctrico",
+        "Estudio de cortocircuito",
+        "Cumplimiento del Código de Red",
         "Diseño de instalaciones eléctricas",
         "Obra electromecánica",
+        "Estudios de calidad de energía y eficiencia energética",
+        "Mantenimiento a subestaciones eléctricas",
         "Verificación de instalaciones eléctricas"
       ],
       route: "/servicios/analisis-electricos"
