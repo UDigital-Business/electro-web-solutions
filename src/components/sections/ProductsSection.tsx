@@ -1,14 +1,6 @@
 
 import { ShoppingCart, Lightbulb, Hammer, Zap } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 
 export function ProductsSection() {
   const products = [
@@ -16,34 +8,30 @@ export function ProductsSection() {
       icon: ShoppingCart,
       title: "Venta de Equipo Eléctrico",
       description: "Suministro especializado de equipos eléctricos de alta calidad para diferentes sectores industriales.",
-      areas: ["Innovación y tecnología", "Construcción", "Área eléctrica"],
-      image: "/lovable-uploads/16871f7f-87c2-4efb-b282-892bc6f67a6b.png"
+      areas: ["Innovación y tecnología", "Construcción", "Área eléctrica"]
     },
     {
       icon: Lightbulb,
       title: "Innovación y Tecnología",
       description: "Soluciones tecnológicas avanzadas para optimizar procesos industriales y comerciales.",
-      areas: ["Sistemas inteligentes", "Automatización", "Monitoreo digital"],
-      image: "/lovable-uploads/f1629c45-9a47-448e-9b90-58a6646ba1f2.png"
+      areas: ["Sistemas inteligentes", "Automatización", "Monitoreo digital"]
     },
     {
       icon: Hammer,
       title: "Construcción",
       description: "Equipos especializados para proyectos de construcción e infraestructura eléctrica.",
-      areas: ["Herramientas especializadas", "Equipos de seguridad", "Materiales certificados"],
-      image: "/lovable-uploads/be5d304a-3231-4e6d-80a8-b71dec35139f.png"
+      areas: ["Herramientas especializadas", "Equipos de seguridad", "Materiales certificados"]
     },
     {
       icon: Zap,
       title: "Área Eléctrica",
       description: "Componentes y equipos eléctricos para instalaciones industriales y comerciales.",
-      areas: ["Dispositivos de protección", "Sistemas de control", "Instrumentación"],
-      image: "/lovable-uploads/9165fa29-0cb8-48dd-87c9-303fd4f6c8e8.png"
+      areas: ["Dispositivos de protección", "Sistemas de control", "Instrumentación"]
     }
   ];
 
   return (
-    <section id="productos" className="py-20 bg-muted/30 overflow-hidden">
+    <section id="productos" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -55,67 +43,40 @@ export function ProductsSection() {
           </p>
         </div>
 
-        <div className="relative w-screen left-1/2 transform -translate-x-1/2">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            plugins={[
-              Autoplay({
-                delay: 4000,
-              }),
-            ]}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {products.map((product, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-fade-in h-full bg-gradient-to-br from-background to-background/95">
-                    <div className="relative overflow-hidden">
-                      <img 
-                        src={product.image} 
-                        alt={product.title}
-                        className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <div className="absolute top-4 left-4 p-3 bg-white/95 backdrop-blur-sm rounded-full shadow-lg group-hover:bg-white transition-colors duration-300">
-                        <product.icon className="h-6 w-6 text-dsae-blue" />
-                      </div>
-                      <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <div className="bg-white/95 backdrop-blur-sm rounded-lg p-3">
-                          <p className="text-sm text-gray-800 font-medium">Calidad Garantizada</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <CardHeader className="pb-3">
-                      <CardTitle className="text-xl font-bold text-foreground group-hover:text-dsae-blue transition-colors duration-300">
-                        {product.title}
-                      </CardTitle>
-                    </CardHeader>
-                    
-                    <CardContent className="pt-0 space-y-4">
-                      <p className="text-muted-foreground leading-relaxed">{product.description}</p>
-                      <div className="space-y-2">
-                        <h4 className="font-semibold text-sm text-dsae-blue">Áreas de aplicación:</h4>
-                        <ul className="space-y-1">
-                          {product.areas.map((area, idx) => (
-                            <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                              <span className="w-1.5 h-1.5 bg-dsae-green rounded-full mr-2 flex-shrink-0"></span>
-                              {area}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex left-4 bg-white/95 hover:bg-white shadow-lg border-2 border-dsae-blue/20 hover:border-dsae-blue/40 transition-all duration-300" />
-            <CarouselNext className="hidden md:flex right-4 bg-white/95 hover:bg-white shadow-lg border-2 border-dsae-blue/20 hover:border-dsae-blue/40 transition-all duration-300" />
-          </Carousel>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          {products.map((product, index) => (
+            <Card 
+              key={index} 
+              className="group hover:shadow-xl transition-all duration-300 border-none shadow-lg hover:scale-105 animate-fade-in h-full"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <CardHeader className="text-center pb-4">
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 rounded-full bg-gradient-to-br from-dsae-blue to-dsae-green">
+                    <product.icon className="h-8 w-8 text-white" />
+                  </div>
+                </div>
+                <CardTitle className="text-lg font-bold text-foreground group-hover:text-dsae-blue transition-colors duration-300">
+                  {product.title}
+                </CardTitle>
+              </CardHeader>
+              
+              <CardContent className="text-center space-y-4">
+                <p className="text-muted-foreground text-sm leading-relaxed">{product.description}</p>
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-sm text-dsae-blue">Áreas de aplicación:</h4>
+                  <ul className="space-y-1">
+                    {product.areas.map((area, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-muted-foreground">
+                        <span className="w-1.5 h-1.5 bg-dsae-green rounded-full mr-2 flex-shrink-0"></span>
+                        {area}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

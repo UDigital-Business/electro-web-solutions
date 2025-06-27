@@ -1,6 +1,6 @@
 
 import { Zap, Building, ArrowRight } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
@@ -57,7 +57,7 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-xl transition-all duration-300 border-none shadow-lg hover:scale-105 animate-fade-in"
+              className="group hover:shadow-xl transition-all duration-300 border-none shadow-lg hover:scale-105 animate-fade-in flex flex-col"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader className="text-center pb-4">
@@ -70,7 +70,8 @@ export function ServicesSection() {
                   {service.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="text-center space-y-6">
+              
+              <CardContent className="text-center space-y-6 flex-grow">
                 <p className="text-muted-foreground text-lg">{service.description}</p>
                 
                 <div className="space-y-3">
@@ -84,15 +85,17 @@ export function ServicesSection() {
                     ))}
                   </ul>
                 </div>
-                
+              </CardContent>
+              
+              <CardFooter className="pt-0">
                 <Button
                   onClick={() => handleViewMore(service.route)}
-                  className="w-full bg-gradient-to-r from-dsae-blue to-dsae-green hover:opacity-90 transition-all duration-300 group mt-6"
+                  className="w-full bg-gradient-to-r from-dsae-blue to-dsae-green hover:opacity-90 transition-all duration-300 group"
                 >
                   Ver detalles completos
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
-              </CardContent>
+              </CardFooter>
             </Card>
           ))}
         </div>
