@@ -20,6 +20,7 @@ export function Navigation() {
     { id: "nosotros", label: "Nosotros" },
     { id: "servicios", label: "Servicios" },
     { id: "productos", label: "Productos" },
+    { id: "proyectos", label: "Proyectos" },
     { id: "ubicacion", label: "Ubicación" },
     { id: "faq", label: "FAQ" },
     { id: "contacto", label: "Contacto" },
