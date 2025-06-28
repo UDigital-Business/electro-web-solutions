@@ -259,15 +259,17 @@ const AnalisisElectricos = () => {
           </div>
 
           <Tabs defaultValue="arco-electrico" className="mb-16">
-            <TabsList className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 h-auto p-2 mb-8">
+            <TabsList className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8 h-auto p-2 mb-8 w-full">
               {subServicios.map((servicio) => (
                 <TabsTrigger 
                   key={servicio.id} 
                   value={servicio.id}
-                  className="flex flex-col items-center p-3 h-auto text-xs"
+                  className="flex flex-col items-center justify-center p-2 sm:p-3 h-auto text-xs min-h-[60px] sm:min-h-[70px] w-full"
                 >
-                  <servicio.icon className="h-4 w-4 mb-1" />
-                  <span className="text-center leading-tight">{servicio.title}</span>
+                  <servicio.icon className="h-4 w-4 mb-1 flex-shrink-0" />
+                  <span className="text-center leading-tight text-[10px] sm:text-xs break-words hyphens-auto max-w-full">
+                    {servicio.title}
+                  </span>
                 </TabsTrigger>
               ))}
             </TabsList>
