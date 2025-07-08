@@ -7,17 +7,20 @@ export function AboutSection() {
     {
       icon: Target,
       title: "Misión",
-      description: "Desarrollamos soluciones en energía e infraestructura que llevan a las empresas a operar de forma más segura, eficiente y sostenible, mediante análisis electromecánicos y obra civil especializada."
+      description: "Desarrollamos soluciones en energía e infraestructura que llevan a las empresas a operar de forma más segura, eficiente y sostenible, mediante análisis electromecánicos y obra civil especializada.",
+      gradient: "from-blue-500 to-blue-600"
     },
     {
       icon: Eye,
       title: "Visión",
-      description: "Consolidarnos como una empresa líder en servicios de energía e infraestructura, reconocidos por impulsar el crecimiento seguro, eficiente y sostenible de nuestros clientes."
+      description: "Consolidarnos como una empresa líder en servicios de energía e infraestructura, reconocidos por impulsar el crecimiento seguro, eficiente y sostenible de nuestros clientes.",
+      gradient: "from-dsae-blue to-dsae-green"
     },
     {
       icon: Heart,
       title: "Valores",
-      description: "Compromiso, Integridad, Calidad, Innovación y Lealtad son los pilares que guían nuestro trabajo diario."
+      description: "Compromiso, Integridad, Calidad, Innovación y Lealtad son los pilares que guían nuestro trabajo diario.",
+      gradient: "from-green-500 to-green-600"
     }
   ];
 
@@ -67,13 +70,17 @@ export function AboutSection() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {values.map((value, index) => (
-            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300 animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
-              <CardContent className="p-6 text-center">
-                <div className="flex justify-center mb-4">
-                  <value.icon className="h-12 w-12 text-dsae-blue" />
+            <Card key={index} className="group relative overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500 animate-scale-in bg-white dark:bg-card" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div className={`absolute inset-0 bg-gradient-to-br ${value.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+              <CardContent className="relative p-8 text-center h-full flex flex-col">
+                <div className="flex justify-center mb-6">
+                  <div className={`p-4 rounded-full bg-gradient-to-br ${value.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <value.icon className="h-8 w-8 text-white" />
+                  </div>
                 </div>
-                <h4 className="text-xl font-bold mb-3 text-foreground">{value.title}</h4>
-                <p className="text-muted-foreground">{value.description}</p>
+                <h4 className="text-2xl font-bold mb-4 text-foreground group-hover:text-dsae-blue transition-colors duration-300">{value.title}</h4>
+                <p className="text-muted-foreground leading-relaxed flex-grow">{value.description}</p>
+                <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${value.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`}></div>
               </CardContent>
             </Card>
           ))}

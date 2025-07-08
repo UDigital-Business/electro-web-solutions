@@ -53,14 +53,14 @@ export function HeroSection() {
                 <div className="flex justify-center mb-2">
                   <Zap className="h-8 w-8 text-dsae-blue" />
                 </div>
-                <div className="text-2xl font-bold text-foreground">15+</div>
+                <div className="text-2xl font-bold text-foreground">+2</div>
                 <div className="text-sm text-muted-foreground">Años de Experiencia</div>
               </div>
               <div className="text-center">
                 <div className="flex justify-center mb-2">
                   <Shield className="h-8 w-8 text-dsae-green" />
                 </div>
-                <div className="text-2xl font-bold text-foreground">500+</div>
+                <div className="text-2xl font-bold text-foreground">+30</div>
                 <div className="text-sm text-muted-foreground">Proyectos Exitosos</div>
               </div>
               <div className="text-center">

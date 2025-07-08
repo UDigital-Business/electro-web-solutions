@@ -50,7 +50,7 @@ export function ProjectsSection() {
           </p>
         </div>
 
-        <div className="relative w-screen left-1/2 transform -translate-x-1/2">
+        <div className="mx-auto max-w-[1400px] w-[80%] lg:w-[90%] xl:w-[80%]">
           <Carousel
             opts={{
               align: "start",

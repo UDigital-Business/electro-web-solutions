@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, Clock, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -67,24 +67,45 @@ export function ContactSection() {
       icon: Phone,
       title: "Teléfono",
       details: "+57 312 345 6789",
-      action: "tel:+573123456789"
+      action: "tel:+573123456789",
+      gradient: "from-blue-500 to-blue-600"
     },
     {
       icon: Mail,
       title: "Email",
       details: "saulizcali@gmail.com",
-      action: "mailto:saulizcali@gmail.com"
+      action: "mailto:saulizcali@gmail.com",
+      gradient: "from-dsae-blue to-dsae-green"
     },
     {
       icon: MapPin,
       title: "Ubicación",
       details: "Cali, Valle del Cauca, Colombia",
-      action: "#"
+      action: "#",
+      gradient: "from-green-500 to-green-600"
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: CheckCircle,
+      text: "Más de 2 años de experiencia",
+      color: "text-green-600"
+    },
+    {
+      icon: Shield,
+      text: "Tecnología de vanguardia",
+      color: "text-blue-600"
+    },
+    {
+      icon: Clock,
+      text: "Soporte técnico especializado",
+      color: "text-purple-600"
     }
   ];
 
   return (
-    <section id="contacto" className="py-20">
+    <section id="contacto" className="py-20 bg-gradient-to-br from-muted/30 to-muted/60">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -103,17 +124,18 @@ export function ContactSection() {
               <h3 className="text-2xl font-bold mb-6 text-foreground">Información de Contacto</h3>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
-                  <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300">
-                    <CardContent className="p-6">
+                  <Card key={index} className="group relative overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 bg-white dark:bg-card">
+                    <div className={`absolute inset-0 bg-gradient-to-br ${info.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+                    <CardContent className="relative p-6">
                       <div className="flex items-center space-x-4">
-                        <div className="p-3 rounded-full bg-gradient-to-br from-dsae-blue to-dsae-green">
+                        <div className={`p-4 rounded-full bg-gradient-to-br ${info.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                           <info.icon className="h-6 w-6 text-white" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-foreground">{info.title}</h4>
+                          <h4 className="font-semibold text-foreground text-lg">{info.title}</h4>
                           <a 
                             href={info.action}
-                            className="text-muted-foreground hover:text-dsae-blue transition-colors duration-200"
+                            className="text-muted-foreground hover:text-dsae-blue transition-colors duration-200 text-sm"
                           >
                             {info.details}
                           </a>
@@ -125,21 +147,25 @@ export function ContactSection() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-dsae-blue to-dsae-green p-6 rounded-2xl text-white">
-              <h4 className="text-xl font-bold mb-3">¿Por qué elegirnos?</h4>
-              <ul className="space-y-2 text-sm">
-                <li>✓ Más de 15 años de experiencia</li>
-                <li>✓ Tecnología de vanguardia</li>
-                <li>✓ Equipo altamente calificado</li>
-                <li>✓ Soporte técnico 24/7</li>
-                <li>✓ Soluciones personalizadas</li>
-              </ul>
-            </div>
+            <Card className="relative overflow-hidden border-none shadow-xl bg-gradient-to-br from-dsae-blue to-dsae-green">
+              <CardContent className="p-8 text-white">
+                <h4 className="text-2xl font-bold mb-6">¿Por qué elegirnos?</h4>
+                <div className="space-y-4">
+                  {benefits.map((benefit, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <benefit.icon className="h-5 w-5 text-white/90" />
+                      <span className="text-white/90">{benefit.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Contact Form */}
-          <Card className="border-none shadow-xl animate-fade-in">
-            <CardContent className="p-8">
+          <Card className="relative overflow-hidden border-none shadow-2xl animate-fade-in bg-white dark:bg-card">
+            <div className="absolute inset-0 bg-gradient-to-br from-dsae-blue/5 to-dsae-green/5"></div>
+            <CardContent className="relative p-8">
               <h3 className="text-2xl font-bold mb-6 text-foreground">Envíanos un Mensaje</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
@@ -153,7 +179,7 @@ export function ContactSection() {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="border-muted focus:border-dsae-blue"
+                      className="border-muted focus:border-dsae-blue transition-colors duration-200"
                     />
                   </div>
                   <div>
@@ -167,7 +193,7 @@ export function ContactSection() {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="border-muted focus:border-dsae-blue"
+                      className="border-muted focus:border-dsae-blue transition-colors duration-200"
                     />
                   </div>
                 </div>
@@ -182,7 +208,7 @@ export function ContactSection() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="border-muted focus:border-dsae-blue"
+                      className="border-muted focus:border-dsae-blue transition-colors duration-200"
                     />
                   </div>
                   <div>
@@ -194,7 +220,7 @@ export function ContactSection() {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="border-muted focus:border-dsae-blue"
+                      className="border-muted focus:border-dsae-blue transition-colors duration-200"
                     />
                   </div>
                 </div>
@@ -210,7 +236,7 @@ export function ContactSection() {
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    className="border-muted focus:border-dsae-blue resize-none"
+                    className="border-muted focus:border-dsae-blue resize-none transition-colors duration-200"
                     placeholder="Cuéntanos sobre tu proyecto o necesidad..."
                   />
                 </div>
@@ -218,7 +244,7 @@ export function ContactSection() {
                 <Button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-gradient-to-r from-dsae-blue to-dsae-green hover:opacity-90 transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-dsae-blue to-dsae-green hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl"
                   size="lg"
                 >
                   {isLoading ? (
