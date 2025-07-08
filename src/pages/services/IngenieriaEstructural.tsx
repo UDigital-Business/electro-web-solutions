@@ -2,28 +2,58 @@
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building, ArrowLeft, CheckCircle } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Building, ArrowLeft, CheckCircle, FileCheck, PenTool } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const IngenieriaEstructural = () => {
   const navigate = useNavigate();
 
-  const subServicios = [
+  const servicios = [
     {
+      id: "dictamen",
+      icon: FileCheck,
+      title: "Dictamen Estructural",
+      description: "La dictaminación estructural es un proceso técnico-legal mediante el cual un profesional acreditado declara si una estructura cumple con las condiciones mínimas de seguridad para seguir siendo utilizada.",
+      casos: [
+        "Cambio de uso o incremento de carga, por ejemplo, convertir una casa en bodega",
+        "Ampliaciones o modificaciones, como añadir pisos, muros o cambios estructurales",
+        "Daños por sismo, incendio, explosión o colapso parcial",
+        "Edificaciones históricas o de valor patrimonial",
+        "Compraventa de inmuebles industriales o comerciales"
+      ],
+      beneficios: [
+        "Certidumbre legal y técnica para propietarios e inversionistas",
+        "Prevención de riesgos y colapsos estructurales",
+        "Base para reforzar o rehabilitar edificios existentes",
+        "Cumplimiento normativo ante dependencias de gobierno",
+        "Tranquilidad y seguridad para los usuarios del inmueble"
+      ],
+      proceso: "Incluye una inspección técnica del inmueble, revisión de planos, pruebas no destructivas y evaluación de daños si los hubiera. Se aplica a estructuras existentes, y se diferencia del diseño estructural porque no diseña, sino que evalúa y valida.",
+      conclusion: "La dictaminación estructural es una herramienta técnica fundamental para evaluar la integridad de edificaciones existentes, especialmente en zonas sísmicas como México. Su realización está respaldada por los reglamentos de construcción, normas técnicas complementarias y leyes de protección civil."
+    },
+    {
+      id: "diseno",
+      icon: PenTool,
       title: "Diseño Estructural",
-      description: "Desarrollo de estructuras especializadas para soportar instalaciones eléctricas y equipos industriales.",
-      caracteristicas: ["Cálculos estructurales", "Diseño de soportes", "Análisis de resistencia"]
-    },
-    {
-      title: "Análisis de Cargas",
-      description: "Evaluación detallada de cargas y esfuerzos para garantizar la estabilidad estructural.",
-      caracteristicas: ["Análisis estático", "Análisis dinámico", "Simulación de cargas sísmicas"]
-    },
-    {
-      title: "Modelado 3D Especializado",
-      description: "Creación de modelos tridimensionales precisos para visualización y análisis estructural.",
-      caracteristicas: ["Modelado BIM", "Renderizado técnico", "Planos especializados"]
+      description: "Desarrollo de estructuras especializadas para soportar instalaciones eléctricas y equipos industriales con análisis detallado de cargas y modelado 3D.",
+      casos: [
+        "Estructuras nuevas para instalaciones eléctricas e industriales",
+        "Soporte especializado para equipos pesados",
+        "Sistemas estructurales para automatización industrial",
+        "Reforzamiento de estructuras existentes",
+        "Análisis sísmico y de cargas dinámicas"
+      ],
+      beneficios: [
+        "Cálculos estructurales precisos y confiables",
+        "Diseño optimizado de soportes y cimentaciones",
+        "Análisis de resistencia y estabilidad estructural",
+        "Modelado BIM y renderizado técnico especializado",
+        "Planos ejecutivos y especificaciones técnicas detalladas"
+      ],
+      proceso: "Incluye análisis estático y dinámico, simulación de cargas sísmicas, modelado 3D especializado y desarrollo de planos ejecutivos con especificaciones técnicas completas.",
+      conclusion: "El diseño estructural especializado garantiza la seguridad, funcionalidad y durabilidad de las instalaciones, cumpliendo con todas las normativas aplicables y optimizando los recursos del proyecto."
     }
   ];
 
@@ -50,56 +80,101 @@ const IngenieriaEstructural = () => {
                 </div>
               </div>
               <h1 className="text-4xl lg:text-5xl font-bold mb-4">
-                <span className="text-gradient">Desarrollo de Ingeniería Estructural</span>
+                <span className="text-gradient">Servicios de Diseño Estructural y Obra Civil</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Diseño y desarrollo de estructuras especializadas para instalaciones eléctricas 
-                y proyectos industriales.
+                Soluciones especializadas en ingeniería estructural para instalaciones eléctricas, 
+                industriales y proyectos de infraestructura.
               </p>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {subServicios.map((servicio, index) => (
-              <Card 
-                key={index}
-                className="hover:shadow-xl transition-all duration-300 border-none shadow-lg animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardHeader>
-                  <CardTitle className="text-xl font-bold text-foreground">
-                    {servicio.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground">{servicio.description}</p>
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-sm text-dsae-blue">Características:</h4>
-                    <ul className="space-y-1">
-                      {servicio.caracteristicas.map((caracteristica, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                          <CheckCircle className="h-4 w-4 text-dsae-green mr-2 flex-shrink-0" />
-                          {caracteristica}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
+          <Tabs defaultValue="dictamen" className="mb-16">
+            <TabsList className="grid w-full grid-cols-2 mb-8">
+              {servicios.map((servicio) => (
+                <TabsTrigger key={servicio.id} value={servicio.id} className="text-sm flex items-center gap-2">
+                  <servicio.icon className="h-4 w-4" />
+                  <span>
+                    {servicio.id === 'dictamen' ? 'Dictamen Estructural' : 'Diseño Estructural'}
+                  </span>
+                </TabsTrigger>
+              ))}
+            </TabsList>
+
+            {servicios.map((servicio) => (
+              <TabsContent key={servicio.id} value={servicio.id}>
+                <Card className="border-none shadow-xl">
+                  <CardHeader className="text-center pb-6">
+                    <div className="flex justify-center mb-4">
+                      <div className="p-3 rounded-full bg-gradient-to-br from-dsae-blue to-dsae-green">
+                        <servicio.icon className="h-8 w-8 text-white" />
+                      </div>
+                    </div>
+                    <CardTitle className="text-2xl font-bold text-foreground mb-4">
+                      {servicio.title}
+                    </CardTitle>
+                    <p className="text-muted-foreground max-w-4xl mx-auto">
+                      {servicio.description}
+                    </p>
+                  </CardHeader>
+                  
+                  <CardContent className="space-y-8">
+                    <div className="bg-gradient-to-br from-dsae-blue/5 to-dsae-green/5 rounded-lg p-6">
+                      <h3 className="text-lg font-semibold text-dsae-blue mb-4">
+                        Proceso y metodología
+                      </h3>
+                      <p className="text-muted-foreground">{servicio.proceso}</p>
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-semibold text-dsae-blue mb-4">
+                        {servicio.id === 'dictamen' ? 'Casos donde es obligatorio o requerido' : 'Aplicaciones principales'}
+                      </h3>
+                      <ul className="space-y-3">
+                        {servicio.casos.map((caso, index) => (
+                          <li key={index} className="flex items-start">
+                            <CheckCircle className="h-5 w-5 text-dsae-green mr-3 mt-0.5 flex-shrink-0" />
+                            <span className="text-muted-foreground">{caso}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-semibold text-dsae-blue mb-4">
+                        {servicio.id === 'dictamen' ? 'Beneficios de realizar un dictamen estructural' : 'Características y beneficios'}
+                      </h3>
+                      <ul className="space-y-3">
+                        {servicio.beneficios.map((beneficio, index) => (
+                          <li key={index} className="flex items-start">
+                            <CheckCircle className="h-5 w-5 text-dsae-green mr-3 mt-0.5 flex-shrink-0" />
+                            <span className="text-muted-foreground">{beneficio}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-dsae-blue/10 to-dsae-green/10 rounded-lg p-6">
+                      <h4 className="font-semibold text-dsae-blue mb-3">Importancia del servicio:</h4>
+                      <p className="text-muted-foreground">{servicio.conclusion}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
             ))}
-          </div>
+          </Tabs>
 
           {/* Call to Action Section */}
           <div className="text-center bg-gradient-to-br from-dsae-blue/10 to-dsae-green/10 rounded-2xl p-8 animate-fade-in">
             <h3 className="text-2xl font-bold mb-4 text-foreground">
-              ¿Necesitas ingeniería estructural especializada?
+              ¿Necesitas servicios de ingeniería estructural?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Contáctanos para desarrollar estructuras especializadas para tu proyecto. 
-              Nuestro equipo de ingenieros estructurales está listo para crear soluciones a medida.
+              Contáctanos para obtener dictámenes estructurales o desarrollar diseños especializados para tu proyecto. 
+              Nuestro equipo de ingenieros estructurales certificados está listo para garantizar la seguridad de tu inversión.
             </p>
             <WhatsAppButton 
-              message="Hola, me interesa conocer más sobre los servicios de Ingeniería Estructural de DSAE"
+              message="Hola, me interesa conocer más sobre los Servicios de Diseño Estructural y Obra Civil de DSAE"
               size="lg"
             />
           </div>

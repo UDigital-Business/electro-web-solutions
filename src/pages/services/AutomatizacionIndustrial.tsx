@@ -121,10 +121,17 @@ const AutomatizacionIndustrial = () => {
 
           <Tabs defaultValue="mantenimiento" className="mb-16">
             <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-8">
-              <TabsTrigger value="mantenimiento" className="text-xs">Mantenimiento</TabsTrigger>
-              <TabsTrigger value="diseno" className="text-xs">Diseño</TabsTrigger>
-              <TabsTrigger value="armado" className="text-xs">Armado</TabsTrigger>
-              <TabsTrigger value="programacion" className="text-xs">Programación</TabsTrigger>
+              {servicios.map((servicio) => (
+                <TabsTrigger key={servicio.id} value={servicio.id} className="text-xs flex items-center gap-1">
+                  <servicio.icon className="h-3 w-3" />
+                  <span className="hidden sm:inline">
+                    {servicio.id === 'mantenimiento' && 'Mantenimiento'}
+                    {servicio.id === 'diseno' && 'Diseño'}
+                    {servicio.id === 'armado' && 'Armado'}
+                    {servicio.id === 'programacion' && 'Programación'}
+                  </span>
+                </TabsTrigger>
+              ))}
             </TabsList>
 
             {servicios.map((servicio) => (
