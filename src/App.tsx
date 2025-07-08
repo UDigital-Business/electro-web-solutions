@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import AnalisisElectricos from "./pages/services/AnalisisElectricos";
 import ProductosElectricos from "./pages/services/ProductosElectricos";
 import IngenieriaEstructural from "./pages/services/IngenieriaEstructural";
+import AutomatizacionIndustrial from "./pages/services/AutomatizacionIndustrial";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/servicios/analisis-electricos" element={<AnalisisElectricos />} />
           <Route path="/servicios/productos-electricos" element={<ProductosElectricos />} />
           <Route path="/servicios/ingenieria-estructural" element={<IngenieriaEstructural />} />
+          <Route path="/servicios/automatizacion-industrial" element={<AutomatizacionIndustrial />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
