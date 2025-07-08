@@ -1,5 +1,5 @@
 
-import { Zap, Building, ArrowRight } from "lucide-react";
+import { Zap, Building, Cog, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -23,6 +23,20 @@ export function ServicesSection() {
         "Verificación de instalaciones eléctricas"
       ],
       route: "/servicios/analisis-electricos"
+    },
+    {
+      icon: Cog,
+      title: "Servicios Automatización Industrial",
+      description: "Soluciones avanzadas en automatización para optimizar procesos industriales con tecnología de vanguardia y sistemas inteligentes.",
+      subServices: [
+        "Sistemas de control automatizado",
+        "Programación de PLCs",
+        "Sistemas SCADA",
+        "Instrumentación industrial",
+        "Monitoreo y supervisión",
+        "Integración de sistemas"
+      ],
+      route: "/servicios/automatizacion-industrial"
     },
     {
       icon: Building,
@@ -54,7 +68,7 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <Card 
               key={index} 
@@ -67,20 +81,20 @@ export function ServicesSection() {
                     <service.icon className="h-10 w-10 text-white" />
                   </div>
                 </div>
-                <CardTitle className="text-2xl font-bold text-foreground group-hover:text-dsae-blue transition-colors duration-300">
+                <CardTitle className="text-xl font-bold text-foreground group-hover:text-dsae-blue transition-colors duration-300">
                   {service.title}
                 </CardTitle>
               </CardHeader>
               
               <CardContent className="text-center space-y-6 flex-grow">
-                <p className="text-muted-foreground text-lg">{service.description}</p>
+                <p className="text-muted-foreground text-sm">{service.description}</p>
                 
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-dsae-blue">Sub-servicios incluidos:</h4>
-                  <ul className="text-sm text-muted-foreground space-y-2">
+                  <h4 className="font-semibold text-dsae-blue text-sm">Sub-servicios incluidos:</h4>
+                  <ul className="text-xs text-muted-foreground space-y-2">
                     {service.subServices.map((subService, subIndex) => (
                       <li key={subIndex} className="flex items-start text-left">
-                        <span className="w-2 h-2 bg-dsae-green rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span className="w-1.5 h-1.5 bg-dsae-green rounded-full mr-2 mt-1.5 flex-shrink-0"></span>
                         <span>{subService}</span>
                       </li>
                     ))}
@@ -91,7 +105,7 @@ export function ServicesSection() {
               <CardFooter className="pt-0">
                 <Button
                   onClick={() => handleViewMore(service.route)}
-                  className="w-full bg-gradient-to-r from-dsae-blue to-dsae-green hover:opacity-90 transition-all duration-300 group"
+                  className="w-full bg-gradient-to-r from-dsae-blue to-dsae-green hover:opacity-90 transition-all duration-300 group text-sm"
                 >
                   Ver detalles completos
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
