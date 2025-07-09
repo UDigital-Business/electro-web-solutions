@@ -1,4 +1,3 @@
-
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -90,11 +89,15 @@ const IngenieriaEstructural = () => {
           </div>
 
           <Tabs defaultValue="dictamen" className="mb-16">
-            <TabsList className="grid w-full grid-cols-2 mb-8">
+            <TabsList className="grid w-full grid-cols-2 mb-8 h-auto p-1">
               {servicios.map((servicio) => (
-                <TabsTrigger key={servicio.id} value={servicio.id} className="text-sm flex items-center gap-2">
-                  <servicio.icon className="h-4 w-4" />
-                  <span>
+                <TabsTrigger 
+                  key={servicio.id} 
+                  value={servicio.id} 
+                  className="flex flex-col items-center gap-2 py-4 px-3 text-sm font-medium h-auto min-h-[80px] data-[state=active]:bg-background data-[state=active]:text-foreground"
+                >
+                  <servicio.icon className="h-5 w-5 flex-shrink-0" />
+                  <span className="text-center leading-tight">
                     {servicio.id === 'dictamen' ? 'Dictamen Estructural' : 'Diseño Estructural'}
                   </span>
                 </TabsTrigger>
