@@ -77,8 +77,8 @@ export function HeroSection() {
             <div className="relative">
               <div className="absolute inset-0 gradient-dsae rounded-2xl blur-3xl opacity-20"></div>
               <img
-                src="/lovable-uploads/eef96ebd-f09e-4b12-bbf9-584d7b1d1934.png"
-                alt="Técnicos trabajando en sitio de construcción"
+                src="/lovable-uploads/97a79187-b272-43fa-bd5f-f6aba4651d97.png"
+                alt="Vista aérea de subestación eléctrica"
                 className="relative rounded-2xl shadow-2xl w-full h-[500px] object-cover"
               />
             </div>

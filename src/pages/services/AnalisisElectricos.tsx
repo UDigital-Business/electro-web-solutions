@@ -12,9 +12,91 @@ const AnalisisElectricos = () => {
 
   const subServicios = [
     {
+      id: "codigo-red",
+      title: "Cumplimiento del Código de Red",
+      icon: Network,
+      description: "Estudios técnicos especializados para cumplir con los requerimientos del Código de Red.",
+      content: {
+        intro: "En DSAE ayudamos a las empresas a cumplir de forma integral con los requerimientos del Código de Red, mediante estudios técnicos especializados que garantizan la estabilidad, eficiencia y seguridad de sus sistemas eléctricos.",
+        definicion: "El Código de Red es una regulación emitida por la Comisión Reguladora de Energía (CRE) en México, que establece los requisitos técnicos que deben cumplir los centros de carga conectados al Sistema Eléctrico Nacional (SEN).",
+        servicios: [
+          "Estudio de Cortocircuito",
+          "Coordinación de Protecciones",
+          "Evaluación de la Calidad de Energía",
+          "Informe de Cumplimiento Integral"
+        ],
+        normativas: [
+          "Código de Red"
+        ],
+        beneficios: [
+          "Evita sanciones y multas por parte de la CRE",
+          "Garantiza la continuidad operativa al minimizar interrupciones",
+          "Protege la infraestructura eléctrica",
+          "Mejora la eficiencia energética",
+          "Facilita la integración al Sistema Eléctrico Nacional (SEN)",
+          "Incrementa la competitividad y confiabilidad de la empresa"
+        ]
+      }
+    },
+    {
+      id: "cortocircuito",
+      title: "Estudio de Cortocircuito",
+      icon: AlertTriangle,
+      description: "Análisis técnico para determinar las magnitudes de corrientes de falla en sistemas eléctricos.",
+      content: {
+        intro: "Los estudios de cortocircuito son estudios técnicos realizados en sistemas eléctricos para determinar las magnitudes de las corrientes de falla que pueden ocurrir en caso de una falla eléctrica. Este análisis permite verificar la capacidad interruptora de los equipos de protección y asegurar la seguridad del sistema y del personal.",
+        aplicaciones: [
+          "Dispositivos de protección (fusibles, interruptores, relevadores)",
+          "Equipos de distribución eléctrica",
+          "Sistemas de puesta a tierra",
+          "Evaluación del nivel de riesgo por arco eléctrico",
+          "Coordinación de protecciones"
+        ],
+        beneficios: [
+          "Ayuda a evitar apagones y tiempo de inactividad prolongados",
+          "Reduce el riesgo de daños e incendios debido a fallas eléctricas",
+          "Aumenta la seguridad del personal",
+          "Permite cumplir regulaciones, como la NOM-001-SEDE-2012 y el Código de Red",
+          "Aumenta la robustez del sistema eléctrico"
+        ],
+        normativas: [
+          "Código de Red",
+          "NOM-001-SEDE-2012",
+          "Manual de Interconexión de CFE"
+        ]
+      }
+    },
+    {
+      id: "coordinacion-protecciones",
+      title: "Estudio de Coordinación de Protecciones",
+      icon: Shield,
+      description: "Análisis especializado para asegurar la operación selectiva y coordinada de dispositivos de protección.",
+      content: {
+        intro: "El estudio de coordinación de protecciones es un análisis técnico especializado que asegura la operación selectiva y coordinada de todos los dispositivos de protección en un sistema eléctrico, garantizando que solo el dispositivo más cercano a la falla opere para aislar únicamente la sección afectada.",
+        servicios: [
+          "Análisis de selectividad de protecciones",
+          "Configuración de curvas tiempo-corriente",
+          "Ajuste de parámetros de protección",
+          "Verificación de coordinación entre dispositivos",
+          "Simulación de fallas y respuesta del sistema"
+        ],
+        beneficios: [
+          "Minimiza el área afectada durante fallas eléctricas",
+          "Mejora la continuidad del servicio eléctrico",
+          "Protege equipos contra daños por fallas",
+          "Optimiza la operación del sistema eléctrico",
+          "Cumple con requisitos normativos de seguridad"
+        ],
+        normativas: [
+          "Código de Red",
+          "NOM-001-SEDE-2012"
+        ]
+      }
+    },
+    {
       id: "arco-electrico",
       title: "Arco Eléctrico",
-      icon: Shield,
+      icon: Zap,
       description: "Evaluación cuantitativa del riesgo térmico en equipos eléctricos energizados.",
       content: {
         intro: "El estudio de arco eléctrico es una evaluación cuantitativa del riesgo térmico que enfrenta el personal cuando realiza actividades en equipos eléctricos energizados o cercanos a ellos. El objetivo principal es calcular la energía incidente (expresada en cal/cm²) que se liberaría durante un evento de arco eléctrico y así determinar:",
@@ -31,9 +113,9 @@ const AnalisisElectricos = () => {
           "Ruido de más de 160 dB"
         ],
         normativas: [
-          "NOM-029-STPS-2011: Prevención de riesgos eléctricos",
-          "NOM-017-STPS-2011: Uso de equipo de protección personal (EPP)",
-          "NOM-001-SEDE-2012: Medidas especiales de seguridad ante riesgos eléctricos"
+          "NOM-029-STPS-2011",
+          "NOM-017-STPS-2011",
+          "NOM-001-SEDE-2012"
         ],
         beneficios: [
           "Mayor seguridad del personal operativo y de mantenimiento",
@@ -45,111 +127,6 @@ const AnalisisElectricos = () => {
       }
     },
     {
-      id: "cortocircuito",
-      title: "Estudio de Cortocircuito",
-      icon: AlertTriangle,
-      description: "Análisis técnico para determinar las magnitudes de corrientes de falla en sistemas eléctricos.",
-      content: {
-        intro: "Los estudios de cortocircuito son estudios técnicos realizados en sistemas eléctricos para determinar las magnitudes de las corrientes de falla que pueden ocurrir en caso de una falla eléctrica. Este análisis permite verificar la capacidad interruptora de los equipos de protección y asegurar la seguridad del sistema y del personal.",
-        aplicaciones: [
-          "Dispositivos de protección (fusibles, interruptores, relevadores)",
-          "Equipos de maniobra",
-          "Sistemas de puesta a tierra",
-          "Evaluación del nivel de riesgo por arco eléctrico",
-          "Coordinación de protecciones"
-        ],
-        beneficios: [
-          "Ayuda a evitar apagones y tiempo de inactividad prolongados",
-          "Reduce el riesgo de daños e incendios debido a fallas eléctricas",
-          "Aumenta la seguridad del personal",
-          "Permite cumplir regulaciones, como la NOM-001-SEDE-2012 y el Código de Red",
-          "Aumenta la robustez del sistema eléctrico"
-        ],
-        normativas: [
-          "Código de Red: Todos los Centros de Carga en media o alta tensión",
-          "NOM-001-SEDE-2012: Equipos de protección adecuadamente dimensionados",
-          "Manual de Interconexión de CFE: Evaluación en punto de interconexión"
-        ]
-      }
-    },
-    {
-      id: "codigo-red",
-      title: "Cumplimiento del Código de Red",
-      icon: Network,
-      description: "Estudios técnicos especializados para cumplir con los requerimientos del Código de Red.",
-      content: {
-        intro: "En DSAE ayudamos a las empresas a cumplir de forma integral con los requerimientos del Código de Red, mediante estudios técnicos especializados que garantizan la estabilidad, eficiencia y seguridad de sus sistemas eléctricos.",
-        definicion: "El Código de Red es una regulación emitida por la Comisión Reguladora de Energía (CRE) en México, que establece los requisitos técnicos que deben cumplir los centros de carga conectados al Sistema Eléctrico Nacional.",
-        servicios: [
-          "Estudio de Cortocircuito",
-          "Coordinación de Protecciones",
-          "Evaluación de la Calidad de Energía",
-          "Informe de Cumplimiento Integral"
-        ],
-        normativas: [
-          "Código de Red (CRE, última versión vigente)",
-          "NOM-001-SEDE-2012",
-          "IEEE C37, IEEE 242, IEEE 519"
-        ],
-        beneficios: [
-          "Evita sanciones y multas por parte de la CRE",
-          "Garantiza la continuidad operativa al minimizar interrupciones",
-          "Protege la infraestructura eléctrica",
-          "Mejora la eficiencia energética",
-          "Facilita la integración a la Red Eléctrica Nacional",
-          "Incrementa la competitividad y confiabilidad de la empresa"
-        ]
-      }
-    },
-    {
-      id: "diseno-instalaciones",
-      title: "Diseño de Instalaciones Eléctricas",
-      icon: Building2,
-      description: "Proceso técnico especializado para la planeación y cálculo de sistemas eléctricos.",
-      content: {
-        intro: "El diseño de instalaciones eléctricas constituye un proceso técnico especializado orientado a la planeación, cálculo y representación gráfica de los sistemas eléctricos que abastecerán de energía a una edificación.",
-        servicios: [
-          "Levantamiento en sitio",
-          "Elaboración de diagramas unifilares",
-          "Distribución y balanceo de cargas eléctricas",
-          "Planos de instalación",
-          "Estudio de iluminación"
-        ],
-        normativas: [
-          "NOM-001-SEDE-2012 – Instalaciones eléctricas",
-          "NOM-007-ENER-2014 – Eficiencia energética para sistemas de alumbrado",
-          "NMX-J-136-ANCE-2007 – Canalizaciones eléctricas"
-        ],
-        beneficios: [
-          "Base sólida para la ejecución del proyecto",
-          "Prevención de riesgos",
-          "Optimización de recursos",
-          "Cumplimiento de estándares técnicos y legales"
-        ]
-      }
-    },
-    {
-      id: "obra-electromecanica",
-      title: "Obra Electromecánica",
-      icon: Settings,
-      description: "Ejecución especializada de instalaciones eléctricas y mecánicas en proyectos de infraestructura.",
-      content: {
-        intro: "El servicio de obra electromecánica comprende la ejecución especializada de instalaciones eléctricas y mecánicas en proyectos de infraestructura industrial, comercial, institucional o de servicios.",
-        actividades: [
-          "Suministro, montaje y conexión de canalizaciones eléctricas",
-          "Instalación y tendido de conductores eléctricos",
-          "Montaje electromecánico de equipos",
-          "Supervisión, control de calidad y cumplimiento normativo"
-        ],
-        normativas: [
-          "NOM-001-SEDE-2012 – Instalaciones eléctricas",
-          "NOM-002-SEDE-2010 – Requisitos de seguridad",
-          "NMX-J-549-ANCE-2005 – Equipos electromecánicos",
-          "NRF-001-CFE y NRF-026-CFE – Normas técnicas"
-        ]
-      }
-    },
-    {
       id: "calidad-energia",
       title: "Estudios de Calidad de Energía y Eficiencia Energética",
       icon: Activity,
@@ -157,18 +134,16 @@ const AnalisisElectricos = () => {
       content: {
         intro: "En DSAE ofrecemos estudios especializados en calidad de energía y eficiencia energética que permiten garantizar un suministro eléctrico estable, eficiente y confiable.",
         servicios: [
-          "Evaluación del Factor de Potencia",
-          "Análisis de Daño en Equipos Eléctricos",
-          "Diagnóstico de Activación de Protecciones",
-          "Dimensionamiento de Equipo Eléctrico",
-          "Mejoramiento de la Calidad de la Energía"
+          "Análisis y corrección del factor de potencia",
+          "Diagnóstico de fallas y daño a equipo sensible por perturbaciones eléctricas",
+          "Cálculo y selección de equipos eléctricos",
+          "Soluciones para la mejora de la calidad de la energía",
+          "Auditoría y optimización del consumo energético"
         ],
         normativas: [
-          "NOM-001-SEDE-2012: Normas mexicanas para instalaciones eléctricas",
-          "IEEE 519: Límites y recomendaciones para armónicos",
-          "Código de Red de la CFE: Requisitos para interconexión"
+          "Disposiciones Complementarias de las Tarifas de CFE"
         ],
-        ventajas: [
+        beneficios: [
           "Reducir costos operativos mediante optimización del consumo",
           "Proteger equipos ante daños por perturbaciones",
           "Garantizar la continuidad operativa",
@@ -178,31 +153,41 @@ const AnalisisElectricos = () => {
       }
     },
     {
-      id: "mantenimiento",
-      title: "Mantenimiento a Subestaciones Eléctricas",
-      icon: Wrench,
-      description: "Proceso fundamental para garantizar la seguridad y continuidad operativa de instalaciones industriales.",
+      id: "diseno-instalaciones",
+      title: "Diseño de Instalaciones Eléctricas y Obra Electromecánica",
+      icon: Building2,
+      description: "Desarrollo técnico y ejecución especializada de sistemas eléctricos y mecánicos.",
       content: {
-        intro: "El mantenimiento a subestaciones eléctricas es un proceso fundamental para garantizar la seguridad, la eficiencia y la continuidad operativa de las instalaciones industriales.",
-        actividades: [
-          "Estudio termográfico previo",
-          "Mantenimiento preventivo",
-          "Pruebas eléctricas",
-          "Estudios de aceite dieléctrico",
-          "Estudio termográfico posterior"
+        intro: "Los servicios de diseño de instalaciones eléctricas y obra electromecánica comprenden el desarrollo técnico y la ejecución especializada de sistemas eléctricos y mecánicos, integrando la planeación, el cálculo y la construcción en proyectos industriales y comerciales.",
+        servicios: [
+          "Levantamiento en sitio",
+          "Elaboración de diagramas unifilares",
+          "Distribución y balanceo de cargas eléctricas",
+          "Planos de instalación",
+          "Estudio de iluminación",
+          "Instalación en campo",
+          "Suministro, montaje y conexión de canalizaciones eléctricas",
+          "Instalación y tendido de conductores eléctricos",
+          "Montaje electromecánico de equipos",
+          "Supervisión, control de calidad y cumplimiento normativo"
         ],
-        recomendaciones: "Se recomienda que el mantenimiento a las subestaciones eléctricas se realice por lo menos una vez al año, aunque dependiendo de la naturaleza de la industria el tiempo podría ser menor.",
-        normativa: "En México, es obligatorio realizar el mantenimiento a las subestaciones eléctricas, debido a lo establecido por la NOM-029-STPS-2011."
+        normativas: [
+          "NOM-001-SEDE-2012"
+        ],
+        beneficios: [
+          "Base sólida para la ejecución del proyecto",
+          "Optimización de recursos",
+          "Cumplimiento normativo"
+        ]
       }
     },
     {
       id: "verificacion",
       title: "Verificación de Instalaciones Eléctricas",
       icon: CheckCircle2,
-      description: "Servicio fundamental para el cumplimiento regulatorio y conexión formal a la red de CFE.",
+      description: "Proceso técnico-normativo realizado por una UVIE acreditada.",
       content: {
-        intro: "En DSAE ofrecemos el Servicio de Verificación de Instalaciones Eléctricas como parte fundamental del cumplimiento regulatorio y la conexión formal a la red de CFE.",
-        definicion: "La verificación eléctrica es un proceso técnico-normativo realizado por una Unidad de Verificación de Instalaciones Eléctricas (UVIE) acreditada ante la EMA y aprobada por la CRE.",
+        intro: "La verificación eléctrica es un proceso técnico-normativo realizado por una Unidad de Verificación de Instalaciones Eléctricas (UVIE) acreditada ante la EMA y aprobada por la CRE.",
         servicios: [
           "Revisión detallada de la instalación eléctrica",
           "Evaluación del cumplimiento normativo",
@@ -219,8 +204,33 @@ const AnalisisElectricos = () => {
           "Asegura el cumplimiento legal y técnico de la instalación",
           "Facilita la obtención del contrato con CFE",
           "Evita rechazos, sanciones y retrasos en la interconexión",
-          "Protege la instalación y a los usuarios finales",
           "Reduce riesgos por fallas o accidentes eléctricos"
+        ]
+      }
+    },
+    {
+      id: "mantenimiento",
+      title: "Mantenimiento a Subestaciones Eléctricas",
+      icon: Wrench,
+      description: "Mantenimiento preventivo-predictivo-correctivo para asegurar protección y operación eficiente.",
+      content: {
+        intro: "El mantenimiento preventivo-predictivo-correctivo de subestaciones eléctricas es clave para asegurar la protección, el desempeño eficiente y la operación ininterrumpida de las instalaciones industriales.",
+        servicios: [
+          "Estudios termográficos",
+          "Mantenimiento preventivo",
+          "Pruebas eléctricas",
+          "Análisis de aceite dieléctrico"
+        ],
+        beneficios: [
+          "Garantiza la continuidad operativa",
+          "Previene fallas inesperadas",
+          "Extiende la vida útil de los equipos",
+          "Mejora la seguridad del personal",
+          "Cumple con requisitos normativos"
+        ],
+        normativas: [
+          "NOM-029-STPS-2011",
+          "NOM-002-SEDE-2010"
         ]
       }
     }
@@ -258,7 +268,7 @@ const AnalisisElectricos = () => {
             </div>
           </div>
 
-          <Tabs defaultValue="arco-electrico" className="mb-16">
+          <Tabs defaultValue="codigo-red" className="mb-16">
             <TabsList className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 h-auto p-2 mb-8 w-full gap-1">
               {subServicios.map((servicio) => (
                 <TabsTrigger 
@@ -354,33 +364,6 @@ const AnalisisElectricos = () => {
                       </div>
                     )}
 
-                    {servicio.content.actividades && (
-                      <div>
-                        <h4 className="font-semibold text-dsae-blue mb-3 text-lg">Actividades Clave:</h4>
-                        <ul className="space-y-2">
-                          {servicio.content.actividades.map((actividad, idx) => (
-                            <li key={idx} className="flex items-start text-muted-foreground">
-                              <span className="w-2 h-2 bg-dsae-green rounded-full mr-3 mt-2.5 flex-shrink-0"></span>
-                              <span>{actividad}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-
-                    {servicio.content.ventajas && (
-                      <div>
-                        <h4 className="font-semibold text-dsae-blue mb-3 text-lg">Ventajas:</h4>
-                        <ul className="space-y-2">
-                          {servicio.content.ventajas.map((ventaja, idx) => (
-                            <li key={idx} className="flex items-start text-muted-foreground">
-                              <CheckCircle2 className="h-4 w-4 text-dsae-green mr-3 mt-1 flex-shrink-0" />
-                              <span>{ventaja}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
 
                     {servicio.content.beneficios && (
                       <div>
@@ -431,19 +414,6 @@ const AnalisisElectricos = () => {
                       </div>
                     )}
 
-                    {servicio.content.recomendaciones && (
-                      <div className="bg-gradient-to-br from-dsae-blue/10 to-dsae-green/10 rounded-lg p-6">
-                        <h4 className="font-semibold text-dsae-blue mb-3 text-lg">Recomendaciones:</h4>
-                        <p className="text-muted-foreground">{servicio.content.recomendaciones}</p>
-                      </div>
-                    )}
-
-                    {servicio.content.normativa && (
-                      <div className="bg-gradient-to-br from-dsae-blue/10 to-dsae-green/10 rounded-lg p-6">
-                        <h4 className="font-semibold text-dsae-blue mb-3 text-lg">Marco Normativo:</h4>
-                        <p className="text-muted-foreground">{servicio.content.normativa}</p>
-                      </div>
-                    )}
                   </CardContent>
                 </Card>
               </TabsContent>
