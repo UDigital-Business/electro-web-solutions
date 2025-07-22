@@ -23,8 +23,7 @@ export function HeroSection() {
                 <span className="text-foreground">en Análisis Electromecánicos</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg">
-                Expertos en análisis, diagnóstico y mantenimiento de sistemas electromecánicos. 
-                Ofrecemos soluciones innovadoras y confiables para optimizar el rendimiento de sus equipos.
+                Potenciando tu industria
               </p>
             </div>
 
@@ -53,14 +52,14 @@ export function HeroSection() {
                 <div className="flex justify-center mb-2">
                   <Zap className="h-8 w-8 text-dsae-blue" />
                 </div>
-                <div className="text-2xl font-bold text-foreground">+2</div>
+                <div className="text-2xl font-bold text-foreground">6</div>
                 <div className="text-sm text-muted-foreground">Años de Experiencia</div>
               </div>
               <div className="text-center">
                 <div className="flex justify-center mb-2">
                   <Shield className="h-8 w-8 text-dsae-green" />
                 </div>
-                <div className="text-2xl font-bold text-foreground">+30</div>
+                <div className="text-2xl font-bold text-foreground">+100</div>
                 <div className="text-sm text-muted-foreground">Proyectos Exitosos</div>
               </div>
               <div className="text-center">
@@ -78,8 +77,8 @@ export function HeroSection() {
             <div className="relative">
               <div className="absolute inset-0 gradient-dsae rounded-2xl blur-3xl opacity-20"></div>
               <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
-                alt="Técnicos instalando cableado eléctrico en obra de construcción"
+                src="/lovable-uploads/eef96ebd-f09e-4b12-bbf9-584d7b1d1934.png"
+                alt="Técnicos trabajando en sitio de construcción"
                 className="relative rounded-2xl shadow-2xl w-full h-[500px] object-cover"
               />
             </div>

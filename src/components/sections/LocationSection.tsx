@@ -1,5 +1,5 @@
 
-import { MapPin, Clock, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 
 export function LocationSection() {
   return (
@@ -25,24 +25,11 @@ export function LocationSection() {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Dirección</h3>
                   <p className="text-muted-foreground">
-                    Joseph Hayden 4883, Prados Guadalupe, 45030 Zapopan, Jal.
+                    Av. Nicolas Copérnico 1510 colonia Moctezuma Poniente CP 45059 Zapopan Jalisco
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="p-3 bg-dsae-green/10 rounded-full">
-                  <Clock className="h-6 w-6 text-dsae-green" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Horarios de Atención</h3>
-                  <div className="text-muted-foreground space-y-1">
-                    <p>Lunes - Viernes: 8:00 AM - 6:00 PM</p>
-                    <p>Sábados: 9:00 AM - 2:00 PM</p>
-                    <p>Domingos: Cerrado</p>
-                  </div>
-                </div>
-              </div>
 
               <div className="flex items-start space-x-4">
                 <div className="p-3 bg-dsae-blue/10 rounded-full">
@@ -50,7 +37,7 @@ export function LocationSection() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Teléfono</h3>
-                  <p className="text-muted-foreground">+52 333 447 1899</p>
+                  <p className="text-muted-foreground">+52 3321770750</p>
                 </div>
               </div>
 
@@ -77,7 +64,7 @@ export function LocationSection() {
                   scrolling="no" 
                   marginHeight={0} 
                   marginWidth={0} 
-                  src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Joseph%20Hayden%204883,%20Prados%20Guadalupe,%2045030%20Zapopan,%20Jal.+(Joseph%20Hayden%204883,%20Prados%20Guadalupe,%2045030%20Zapopan,%20Jal.)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                  src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Av.%20Nicolas%20Copérnico%201510%20colonia%20Moctezuma%20Poniente%20CP%2045059%20Zapopan%20Jalisco+(Av.%20Nicolas%20Copérnico%201510)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                   title="Ubicación DSAE"
                   className="w-full h-96 rounded-2xl"
                 >

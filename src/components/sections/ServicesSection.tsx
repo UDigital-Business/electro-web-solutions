@@ -52,6 +52,8 @@ export function ServicesSection() {
   ];
 
   const handleViewMore = (route: string) => {
+    // Scroll to top smoothly before navigating
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     navigate(route);
   };
 
