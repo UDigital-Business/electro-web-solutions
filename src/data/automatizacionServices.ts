@@ -29,7 +29,7 @@ export const automatizacionServices = [
       "Diseño CAD de la distribución interna del tablero con ubicación precisa de componentes",
       "Elaboración del diagrama unifilar o multifilar de control y potencia",
       "Diseño de diagramas de comunicación para redes industriales (Modbus, Profinet, etc.)",
-      "Definición de distancias mínimas de seguridad eléctrica",
+      "Diseño de diagrama eléctrico de control",
       "Documentación completa para fabricación o validación"
     ],
     normativas: [

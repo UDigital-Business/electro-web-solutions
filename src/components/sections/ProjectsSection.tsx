@@ -12,28 +12,52 @@ import Autoplay from "embla-carousel-autoplay";
 export function ProjectsSection() {
   const projects = [
     {
-      title: "Instalación Eléctrica Industrial",
-      description: "Proyecto de modernización de sistema eléctrico en planta industrial",
-      image: "/lovable-uploads/16871f7f-87c2-4efb-b282-892bc6f67a6b.png",
-      category: "Instalación Eléctrica"
+      title: "Subestación Eléctrica",
+      description: "1 - Protección de transformador – Estudio para selección de protecciones de transformador.",
+      image: "/lovable-uploads/d798b657-cf08-417b-b8cf-0da40c75f275.png",
+      category: "Protección de transformador"
     },
     {
       title: "Subestación Eléctrica",
-      description: "Diseño e instalación de subestación eléctrica de media tensión",
-      image: "/lovable-uploads/f1629c45-9a47-448e-9b90-58a6646ba1f2.png",
-      category: "Subestación"
+      description: "2 - Obra civil – Construcción de nave industrial",
+      image: "/lovable-uploads/980b5fe6-2e03-4069-a5cc-9e4a7765989a.png",
+      category: "Obra civil"
     },
     {
-      title: "Sistema de Automatización",
-      description: "Implementación de sistema de control y automatización industrial",
-      image: "/lovable-uploads/be5d304a-3231-4e6d-80a8-b71dec35139f.png",
-      category: "Automatización"
+      title: "Subestación Eléctrica",
+      description: "3- Mantenimiento a subestación – Pruebas eléctricas a transformadores",
+      image: "/lovable-uploads/87e0427f-95b3-47c3-87ad-923c0a5401d8.png",
+      category: "Mantenimiento"
     },
     {
-      title: "Proyecto de Eficiencia Energética",
-      description: "Optimización del consumo energético en instalaciones comerciales",
-      image: "/lovable-uploads/9165fa29-0cb8-48dd-87c9-303fd4f6c6e8.png",
-      category: "Eficiencia Energética"
+      title: "Subestación Eléctrica",
+      description: "4 - Estudio de coordinación de protecciones – Coordinación de protecciones a planta industrial",
+      image: "/lovable-uploads/f0376457-9fbb-4f04-81ab-a1434150f370.png",
+      category: "Coordinación de protecciones"
+    },
+    {
+      title: "Subestación Eléctrica",
+      description: "5 - Obra civil – Construcción de nave industrial",
+      image: "/lovable-uploads/9099be27-612f-4e08-88bc-6ce2197a9495.png",
+      category: "Obra civil"
+    },
+    {
+      title: "Subestación Eléctrica",
+      description: "6 - Estudio de cortocircuito – Estudio realizado a planta industrial",
+      image: "/lovable-uploads/857663e9-068c-45e9-beda-f1cddc1bf1ed.png",
+      category: "Estudio de cortocircuito"
+    },
+    {
+      title: "Subestación Eléctrica",
+      description: "7 - Armado de tablero de control – Instalación de CCM.",
+      image: "/lovable-uploads/8affa213-e36e-4e11-bceb-215608c997c3.png",
+      category: "Tablero de control"
+    },
+    {
+      title: "Subestación Eléctrica",
+      description: "8 - Obra electromecánica – Instalación de TC's y TP's.",
+      image: "/lovable-uploads/f7b63d90-52fe-4958-9c50-9a6c51ec9d04.png",
+      category: "Obra electromecánica"
     }
   ];
 
