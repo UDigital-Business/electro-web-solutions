@@ -62,13 +62,13 @@ export function HeroSection() {
                 <div className="text-2xl font-bold text-foreground">+100</div>
                 <div className="text-sm text-muted-foreground">Proyectos Exitosos</div>
               </div>
-              <div className="text-center">
+              {/* <div className="text-center">
                 <div className="flex justify-center mb-2">
                   <Award className="h-8 w-8 text-dsae-blue" />
                 </div>
                 <div className="text-2xl font-bold text-foreground">98%</div>
                 <div className="text-sm text-muted-foreground">Satisfacción Cliente</div>
-              </div>
+              </div> */}
             </div>
           </div>
 
