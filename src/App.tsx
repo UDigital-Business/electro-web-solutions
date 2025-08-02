@@ -10,6 +10,7 @@ import AnalisisElectricos from "./pages/services/AnalisisElectricos";
 import ProductosElectricos from "./pages/services/ProductosElectricos";
 import IngenieriaEstructural from "./pages/services/IngenieriaEstructural";
 import AutomatizacionIndustrial from "./pages/services/AutomatizacionIndustrial";
+import Productos from "./pages/Productos";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/productos" element={<Productos />} />
           <Route path="/servicios/analisis-electricos" element={<AnalisisElectricos />} />
           <Route path="/servicios/productos-electricos" element={<ProductosElectricos />} />
           <Route path="/servicios/ingenieria-estructural" element={<IngenieriaEstructural />} />
