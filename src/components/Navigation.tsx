@@ -32,7 +32,7 @@ export function Navigation() {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/ad92c90c-2a9f-42db-bf1d-063723851f3a.png" 
+              src="/lovable-uploads/4ab977eb-71b1-415e-a87d-c6f18a1178a4.png" 
               alt="DSAE Logo" 
               className="h-10 w-auto"
             />
