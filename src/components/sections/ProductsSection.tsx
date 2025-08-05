@@ -1,7 +1,10 @@
 import { ShoppingCart, Lightbulb, Hammer, Zap, Wrench } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 export function ProductsSection() {
+  const navigate = useNavigate();
   const servicios = [
     {
       icon: Zap,
@@ -70,6 +73,13 @@ export function ProductsSection() {
                 Suministro especializado de equipos eléctricos de alta calidad para diferentes sectores industriales, 
                 garantizando soluciones confiables y eficientes para cada proyecto.
               </p>
+              <Button 
+                onClick={() => navigate("/productos")}
+                className="bg-gradient-to-r from-dsae-blue to-dsae-green text-white hover:opacity-90 transition-opacity duration-300"
+                size="lg"
+              >
+                Ver productos
+              </Button>
             </CardContent>
           </Card>
         </div>

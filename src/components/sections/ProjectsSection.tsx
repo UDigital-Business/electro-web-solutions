@@ -58,6 +58,12 @@ export function ProjectsSection() {
       description: "8 - Obra electromecánica – Instalación de TC's y TP's.",
       image: "/lovable-uploads/f7b63d90-52fe-4958-9c50-9a6c51ec9d04.png",
       category: "Obra electromecánica"
+    },
+    {
+      title: "Subestación Eléctrica",
+      description: "Mantenimiento a subestación – Limpieza a componentes con solventes dieléctricos.",
+      image: "/lovable-uploads/f1629c45-9a47-448e-9b90-58a6646ba1f2.png",
+      category: "Mantenimiento"
     }
   ];
 

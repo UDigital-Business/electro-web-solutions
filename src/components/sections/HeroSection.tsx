@@ -47,7 +47,7 @@ export function HeroSection() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8">
+            <div className="grid grid-cols-2 gap-6 pt-8">
               <div className="text-center">
                 <div className="flex justify-center mb-2">
                   <Zap className="h-8 w-8 text-dsae-blue" />
@@ -62,13 +62,6 @@ export function HeroSection() {
                 <div className="text-2xl font-bold text-foreground">+100</div>
                 <div className="text-sm text-muted-foreground">Proyectos Exitosos</div>
               </div>
-              {/* <div className="text-center">
-                <div className="flex justify-center mb-2">
-                  <Award className="h-8 w-8 text-dsae-blue" />
-                </div>
-                <div className="text-2xl font-bold text-foreground">98%</div>
-                <div className="text-sm text-muted-foreground">Satisfacción Cliente</div>
-              </div> */}
             </div>
           </div>
 
