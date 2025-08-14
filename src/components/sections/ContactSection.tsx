@@ -80,7 +80,7 @@ export function ContactSection() {
     {
       icon: Phone,
       title: "Teléfono",
-      details: "+57 312 345 6789",
+      details: "+52 33 2177 0750",
       action: "tel:+573123456789",
       gradient: "from-blue-500 to-blue-600"
     },
