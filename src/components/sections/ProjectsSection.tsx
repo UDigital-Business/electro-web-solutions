@@ -13,7 +13,7 @@ export function ProjectsSection() {
   const projects = [
     {
       title: "Subestación Eléctrica",
-      description: "Protección de transformador – Estudio para selección de protecciones de transformadores.",
+      description: "1 - Protección de transformador – Estudio para selección de protecciones de transformadores.",
       image: "/lovable-uploads/d798b657-cf08-417b-b8cf-0da40c75f275.png",
       category: "Protección de transformador"
     },
@@ -25,7 +25,7 @@ export function ProjectsSection() {
     },
     {
       title: "Subestación Eléctrica",
-      description: "3- Mantenimiento a subestación – Pruebas eléctricas",
+      description: "3 - Mantenimiento a subestación – Pruebas eléctricas",
       image: "/lovable-uploads/87e0427f-95b3-47c3-87ad-923c0a5401d8.png",
       category: "Mantenimiento"
     },
