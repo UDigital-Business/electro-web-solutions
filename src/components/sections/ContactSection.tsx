@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -31,12 +31,25 @@ export function ContactSection() {
     setIsLoading(true);
 
     try {
-      // Simular envío de email - en producción se conectaría con un servicio real
-      console.log("Datos del formulario:", formData);
-      console.log("Enviando email a: saulizcali@gmail.com");
-      
-      // Simular delay de envío
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Configuración de EmailJS con tu Service ID
+      const serviceID = 'service_twea8hv';
+      const templateID = 'template_zptkwr9'; // Reemplaza con tu Template ID
+      const publicKey = 'POS43gJA8w67oOBkm'; // Reemplaza con tu Public Key
+
+      // Enviar el formulario
+      await emailjs.send(
+        serviceID,
+        templateID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          message: formData.message,
+          to_email: 'gabosotelo2006@gmail.com'
+        },
+        publicKey
+      );
 
       toast({
         title: "¡Mensaje enviado exitosamente!",
@@ -52,6 +65,7 @@ export function ContactSection() {
         message: ""
       });
     } catch (error) {
+      console.error("Error al enviar el mensaje:", error);
       toast({
         title: "Error al enviar mensaje",
         description: "Por favor, intenta nuevamente.",
@@ -66,15 +80,15 @@ export function ContactSection() {
     {
       icon: Phone,
       title: "Teléfono",
-      details: "+57 312 345 6789",
+      details: "+52 33 2177 0750",
       action: "tel:+573123456789",
       gradient: "from-blue-500 to-blue-600"
     },
     {
       icon: Mail,
       title: "Email",
-      details: "saulizcali@gmail.com",
-      action: "mailto:saulizcali@gmail.com",
+      details: "gabosotelo2006@gmail.com",
+      action: "mailto:gabosotelo2006@gmail.com",
       gradient: "from-dsae-blue to-dsae-green"
     },
     {
