@@ -14,12 +14,11 @@ export function FAQSection() {
     },
     {
       question: "¿Qué es el Código de Red y quién debe cumplirlo?",
-      answer: "El Código de Red es una regulación de cumplimiento obligatorio emitida por la Comisión Reguladora de Energía (CRE), que define los criterios mínimos de eficiencia, calidad, seguridad y sustentabilidad que deben cumplir los usuarios del Sistema Eléctrico Nacional (SEN). Su objetivo principal es garantizar que las instalaciones conectadas al SEN operen de manera eficiente, segura y sin afectar la estabilidad del sistema eléctrico del país."
+      answer: "El Código de Red es una regulación de cumplimiento obligatorio emitida por la Secretaria de Energía (SENER), que define los criterios mínimos de eficiencia, calidad, seguridad y sustentabilidad que deben cumplir los usuarios del Sistema Eléctrico Nacional (SEN). Su objetivo principales garantizar que las instalaciones conectadas al SEN operen de manera eficiente, segura y sin afectar la estabilidad del sistema eléctrico del país."
     },
     {
       question: "¿Por qué debo cumplir con el Código de Red?",
-      answer: "Cumplir con el Código de Red permite a las empresas evitar sanciones por parte de la Comisión Reguladora de Energía (CRE) o la Comisión Federal de Electricidad (CFE). Además, contribuye a mantener la estabilidad del Sistema Eléctrico Nacional, al prevenir distorsiones o sobrecargas que podrían afectar a otros usuarios. Entre los requisitos técnicos más importantes se encuentran: mantener un factor de potencia mínimo de 0.95 (que se elevará a 0.97 a partir de 2026), controlar los niveles de distorsión armónica, asegurar una adecuada regulación de voltaje y contar con protecciones eléctricas efectivas."
-    },
+      answer: "El Código de Red es una regulación de cumplimiento obligatorio emitida por la Secretaria de Energía (SENER), que define los criterios mínimos de eficiencia, calidad, seguridad y sustentabilidad que deben cumplir los usuarios del Sistema Eléctrico Nacional (SEN). Su objetivo principal es garantizar que las instalaciones conectadas al SEN operen de manera eficiente, segura y sin afectar la estabilidad del sistema eléctrico del país."},
     {
       question: "¿Qué es un estudio de cortocircuito y para qué sirve?",
       answer: "Es un análisis técnico que calcula las corrientes máximas que podrían circular en caso de una falla eléctrica grave (como un contacto entre fases o a tierra). Este estudio permite seleccionar y coordinar los dispositivos de protección eléctrica (interruptores, fusibles, relevadores) para que actúen eficazmente ante una falla, protegiendo tanto a los equipos como al personal. También es obligatorio según el Código de Red y otras normas eléctricas. Su implementación es clave para planificar la expansión de la red eléctrica de forma segura y evitar interrupciones graves en la operación industrial."
@@ -30,11 +29,11 @@ export function FAQSection() {
     },
     {
       question: "¿Cada cuánto tiempo se debe dar mantenimiento a una subestación eléctrica?",
-      answer: "Se recomienda realizar un mantenimiento predictivo preventivo al menos una vez al año. En ambientes adversos (con polvo, humedad o contaminantes), deben realizarse inspecciones y limpiezas cada seis meses. El mantenimiento incluye revisión visual, limpieza, pruebas eléctricas, ajustes y corrección de anomalías. También debe aplicarse mantenimiento correctivo inmediato ante cualquier falla. Una gestión adecuada del mantenimiento mejora la seguridad, evita fallas inesperadas y cumple con la NOM-001-SEDE."
+      answer: "Se recomienda realizar un mantenimiento predictivo preventivo al menos una vez al año. En ambientes adversos (con polvo, humedad o contaminantes), deben realizarse inspecciones y limpiezas cada seis meses. El mantenimiento incluye revisión visual, limpieza, pruebas eléctricas, ajustes y corrección de anomalías. También debe aplicarse mantenimiento correctivo inmediato ante cualquier falla. Una gestión adecuada del mantenimiento mejora la seguridad, evita fallas inesperadas y cumple con la NOM-002."
     },
     {
       question: "¿Qué es una UVIE y para qué sirve?",
-      answer: "Una UVIE (Unidad de Verificación de Instalaciones Eléctrica) es una entidad autorizada por la Entidad Mexicana de Acreditación (EMA) y reconocida por la CRE. Su función es verificar que las instalaciones eléctricas industriales cumplan con los requisitos técnicos y de seguridad establecidos en la normativa nacional. Contar con la verificación de una UVIE permite operar legalmente, obtener permisos y garantizar la seguridad eléctrica. También ayuda a detectar áreas de mejora en la instalación para aumentar su confiabilidad y eficiencia."
+      answer: "Una UVIE (Unidad de Verificación de Instalaciones Eléctrica) es una entidad autorizada por la Entidad Mexicana de Acreditación (EMA) y reconocida por la SENER. Su función es verificar que las instalaciones eléctricas industriales cumplan con los requisitos técnicos y de seguridad establecidos en la normativa nacional. Contar con la verificación de una UVIE permite operar legalmente, obtener permisos y garantizar la seguridad eléctrica. También ayuda a detectar áreas de mejora en la instalación para aumentar su confiabilidad y eficiencia."
     },
     {
       question: "¿Qué es un diagrama unifilar y por qué es indispensable?",
@@ -46,7 +45,7 @@ export function FAQSection() {
     },
     {
       question: "¿Por qué necesito un diseño estructural antes de construir?",
-      answer: "El diseño estructural asegura que la obra será resistente, segura y funcional, considerando factores como el peso, viento, sismos y uso previsto. Este diseño es obligatorio y debe cumplir con los reglamentos de construcción y sus normas técnicas complementarios vigentes. Además de garantizar la estabilidad del edificio, permite optimizar el uso de materiales, facilitar la supervisión en obra y evitar errores que podrían generar daños graves o colapsos en el futuro."
+      answer: "El diseño estructural asegura que la obra será resistente, segura y funcional, considerando factores como el peso, viento, sismos y uso previsto. Este diseño es obligatorio y debe cumplir con los reglamentos de construcción y sus normas técnicas complementarias vigentes. Además de garantizar la estabilidad del edificio, permite optimizar el uso de materiales, facilitar la supervisión en obra y evitar errores que podrían generar daños graves o colapsos en el futuro."
     },
     {
       question: "¿Qué es un dictamen estructural y porque es útil?",

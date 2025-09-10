@@ -35,7 +35,7 @@ export function FooterSection() {
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
               Desarrollo y Soluciones en Análisis Electromecánicos. 
-              2 años ofreciendo tecnología de vanguardia para 
+              6 años ofreciendo tecnología de vanguardia para 
               optimizar el rendimiento de equipos industriales.
             </p>
             <div className="space-y-2 text-sm text-gray-300">
@@ -49,7 +49,7 @@ export function FooterSection() {
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
-                <span>Cali, Valle del Cauca, Colombia</span>
+                <span>Av. Nicolas Copérnico 1510 colonia Moctezuma Poniente CP 45059 Zapopan Jalisco</span>
               </div>
             </div>
           </div>

@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom"; 
+import { useLocation, useNavigate, Link } from "react-router-dom"; 
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
-import { Link } from "react-router-dom"; 
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,11 +11,11 @@ export function Navigation() {
 
   const scrollToSection = (sectionId: string) => {
     if (location.pathname !== "/") {
-      
+      // 👇 si no estoy en home, navego con hash
       navigate(`/#${sectionId}`);
       setIsMenuOpen(false);
     } else {
-      
+      // 👇 si ya estoy en home, hago scroll directo
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
@@ -29,7 +28,7 @@ export function Navigation() {
     { href: "/", label: "Inicio" },
     { id: "nosotros", label: "Nosotros" },
     { id: "servicios", label: "Servicios" },
-    { href: "/productos", label: "Productos" },
+    { href: "/productos", label: "Productos" }, // 🔹 link directo a página
     { id: "proyectos", label: "Proyectos" },
     { id: "faq", label: "FAQ" },
     { id: "contacto", label: "Contacto" },
@@ -41,14 +40,14 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <a href="/">
-            <img 
-              src="/lovable-uploads/4ab977eb-71b1-415e-a87d-c6f18a1178a4.png" 
-              alt="DSAE Logo" 
-              className="h-10 w-auto"
-            />
-            <span className="text-xl font-bold text-gradient">DSAE</span>
-            </a>
+            <Link to="/">
+              <img 
+                src="/lovable-uploads/4ab977eb-71b1-415e-a87d-c6f18a1178a4.png" 
+                alt="DSAE Logo" 
+                className="h-10 w-auto"
+              />
+              <span className="text-xl font-bold text-gradient">DSAE</span>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}

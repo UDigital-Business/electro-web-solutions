@@ -94,7 +94,7 @@ export function ContactSection() {
     {
       icon: MapPin,
       title: "Ubicación",
-      details: "Cali, Valle del Cauca, Colombia",
+      details: "Av. Nicolas Copérnico 1510 colonia Moctezuma Poniente CP 45059 Zapopan Jalisco",
       action: "#",
       gradient: "from-green-500 to-green-600"
     }
@@ -103,7 +103,7 @@ export function ContactSection() {
   const benefits = [
     {
       icon: CheckCircle,
-      text: "Más de 2 años de experiencia",
+      text: "Más de 6 años de experiencia",
       color: "text-green-600"
     },
     {

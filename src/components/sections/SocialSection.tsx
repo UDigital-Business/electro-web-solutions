@@ -1,5 +1,5 @@
 
-import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Music2} from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function SocialSection() {
@@ -25,20 +25,13 @@ export function SocialSection() {
       color: "hover:text-blue-700",
       gradient: "from-blue-700 to-blue-800"
     },
-    {
-      icon: Twitter,
-      name: "Twitter",
-      url: "https://twitter.com/dsae",
-      color: "hover:text-blue-400",
-      gradient: "from-blue-400 to-blue-500"
+     {
+      icon: Music2, 
+      name: "TikTok",
+      url: "https://www.tiktok.com/@dsae",
+      color: "hover:text-black",
+      gradient: "from-black to-gray-800"
     },
-    {
-      icon: Youtube,
-      name: "YouTube",
-      url: "https://youtube.com/dsae",
-      color: "hover:text-red-600",
-      gradient: "from-red-500 to-red-600"
-    }
   ];
 
   return (

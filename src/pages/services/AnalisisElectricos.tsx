@@ -269,7 +269,7 @@ const AnalisisElectricos = () => {
           </div>
 
           <Tabs defaultValue="codigo-red" className="mb-16">
-            <TabsList className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 h-auto p-2 mb-8 w-full gap-1">
+            <TabsList className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 h-auto p-2 mb-8 w-full gap-1">
               {subServicios.map((servicio) => (
                 <TabsTrigger 
                   key={servicio.id} 

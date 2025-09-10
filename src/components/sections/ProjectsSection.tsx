@@ -13,7 +13,7 @@ export function ProjectsSection() {
   const projects = [
     {
       title: "Subestación Eléctrica",
-      description: "1 - Protección de transformador – Estudio para selección de protecciones de transformador.",
+      description: "Protección de transformador – Estudio para selección de protecciones de transformadores.",
       image: "/lovable-uploads/d798b657-cf08-417b-b8cf-0da40c75f275.png",
       category: "Protección de transformador"
     },
@@ -25,7 +25,7 @@ export function ProjectsSection() {
     },
     {
       title: "Subestación Eléctrica",
-      description: "3- Mantenimiento a subestación – Pruebas eléctricas a transformadores",
+      description: "3- Mantenimiento a subestación – Pruebas eléctricas",
       image: "/lovable-uploads/87e0427f-95b3-47c3-87ad-923c0a5401d8.png",
       category: "Mantenimiento"
     },
@@ -104,8 +104,8 @@ export function ProjectsSection() {
                         className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <div className="absolute top-4 left-4 bg-dsae-blue/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
-                        {project.category}
+                      <div className="absolute top-4 left-4 bg-dsae-blue/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium transition-opacity duration-500 opacity-100 group-hover:opacity-0">
+                       {project.category}
                       </div>
                       <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                         <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4">
