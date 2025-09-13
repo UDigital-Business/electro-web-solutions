@@ -32,9 +32,10 @@ export function ContactSection() {
 
     try {
       // Configuración de EmailJS con tu Service ID
-      const serviceID = 'service_twea8hv';
-      const templateID = 'template_zptkwr9'; // Reemplaza con tu Template ID
-      const publicKey = 'POS43gJA8w67oOBkm'; // Reemplaza con tu Public Key
+      const serviceID = 'service_0jmy43e';
+      const templateID = 'template_pr1prlf'; // Reemplaza con tu Template ID
+      const publicKey = 'SpGloohbOi3LqV3mm'; // Reemplaza con tu Public Key
+      const toEmail = 'contacto@solucionesdsae.com.mx';
 
       // Enviar el formulario
       await emailjs.send(
@@ -46,7 +47,7 @@ export function ContactSection() {
           phone: formData.phone,
           company: formData.company,
           message: formData.message,
-          to_email: 'gabosotelo2006@gmail.com'
+          to_email: toEmail
         },
         publicKey
       );
