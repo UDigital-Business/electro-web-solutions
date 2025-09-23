@@ -82,14 +82,14 @@ export function ContactSection() {
       icon: Phone,
       title: "Teléfono",
       details: "+52 33 2177 0750",
-      action: "tel:+573123456789",
+      action: "tel:+523321770750",
       gradient: "from-blue-500 to-blue-600"
     },
     {
       icon: Mail,
       title: "Email",
-      details: "gabosotelo2006@gmail.com",
-      action: "mailto:gabosotelo2006@gmail.com",
+      details: "contacto@solucionesdsae.com.mx",
+      action: "mailto:contacto@solucionesdsae.com.mx",
       gradient: "from-dsae-blue to-dsae-green"
     },
     {

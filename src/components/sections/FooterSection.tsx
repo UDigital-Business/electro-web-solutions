@@ -22,7 +22,7 @@ export function FooterSection() {
   return (
     <footer className="bg-dsae-green-dark text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="flex justify-center gap-20 sm:flex-row flex-col">
           {/* Logo and Description */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
@@ -45,7 +45,7 @@ export function FooterSection() {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>saulizcali@gmail.com</span>
+                <span>contacto@solucionesdsae.com.mx</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
@@ -68,18 +68,6 @@ export function FooterSection() {
                   </button>
                 </li>
               ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Servicios</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li>Análisis de Vibraciones</li>
-              <li>Análisis Eléctrico</li>
-              <li>Mantenimiento Predictivo</li>
-              <li>Consultoría Técnica</li>
-              <li>Puesta en Marcha</li>
             </ul>
           </div>
         </div>

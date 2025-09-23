@@ -274,10 +274,10 @@ const AnalisisElectricos = () => {
                 <TabsTrigger 
                   key={servicio.id} 
                   value={servicio.id}
-                  className="flex flex-col md:flex-row items-center justify-center md:justify-start p-2 h-auto text-xs min-h-[80px] w-full gap-1 md:gap-2 whitespace-normal"
+                  className="flex flex-col items-center justify-center md:justify-start p-2 h-auto text-xs min-h-[80px] w-full gap-1 md:gap-2 whitespace-normal"
                 >
                   <servicio.icon className="h-4 w-4 flex-shrink-0" />
-                  <span className="text-center md:text-left leading-tight text-[9px] sm:text-[10px] break-words hyphens-auto max-w-full word-wrap overflow-wrap-anywhere">
+                  <span className="text-center md:text-left leading-tight text-[14px] sm:text-[14px] break-words hyphens-auto max-w-full word-wrap overflow-wrap-anywhere">
                     {servicio.title}
                   </span>
                 </TabsTrigger>

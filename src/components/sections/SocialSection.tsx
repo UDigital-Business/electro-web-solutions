@@ -7,28 +7,21 @@ export function SocialSection() {
     {
       icon: Facebook,
       name: "Facebook",
-      url: "https://facebook.com/dsae",
+      url: "https://www.facebook.com/share/1G7z4gvnYr/?mibextid=wwXIfr",
       color: "hover:text-blue-600",
       gradient: "from-blue-600 to-blue-700"
     },
     {
       icon: Instagram,
       name: "Instagram",
-      url: "https://instagram.com/dsae",
+      url: "https://www.instagram.com/soluciones_dsae?igsh=N241empld2k4eDRw&utm_source=qr",
       color: "hover:text-pink-600",
       gradient: "from-pink-500 to-purple-600"
-    },
-    {
-      icon: Linkedin,
-      name: "LinkedIn",
-      url: "https://linkedin.com/company/dsae",
-      color: "hover:text-blue-700",
-      gradient: "from-blue-700 to-blue-800"
     },
      {
       icon: Music2, 
       name: "TikTok",
-      url: "https://www.tiktok.com/@dsae",
+      url: "https://www.tiktok.com/@solucionesdsae?is_from_webapp=1&sender_device=pc",
       color: "hover:text-black",
       gradient: "from-black to-gray-800"
     },
