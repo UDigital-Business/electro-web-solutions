@@ -47,7 +47,7 @@ export function LocationSection() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Email</h3>
-                  <p className="text-muted-foreground">contacto@dsae.com</p>
+                  <p className="text-muted-foreground">contacto@solucionesdsae.com.mx</p>
                 </div>
               </div>
             </div>
